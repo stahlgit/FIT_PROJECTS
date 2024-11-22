@@ -1,0 +1,1 @@
+/usr/bin/g++ -g "CMakeFiles/isa-top.dir/src/main.cpp.o" "CMakeFiles/isa-top.dir/src/packetcapture.cpp.o" "CMakeFiles/isa-top.dir/src/stats.cpp.o" "CMakeFiles/isa-top.dir/src/display.cpp.o" "CMakeFiles/isa-top.dir/src/utils.cpp.o" -o isa-top  -lpcap -lncursesw

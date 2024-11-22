@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/peter/Desktop/isa-top/build",
+  "command": "/usr/bin/g++  -I/usr/include/libnl3 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/home/peter/Desktop/isa-top/include -g -std=gnu++17 -o CMakeFiles/isa-top.dir/src/main.cpp.o -c /home/peter/Desktop/isa-top/src/main.cpp",
+  "file": "/home/peter/Desktop/isa-top/src/main.cpp",
+  "output": "CMakeFiles/isa-top.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/peter/Desktop/isa-top/build",
+  "command": "/usr/bin/g++  -I/usr/include/libnl3 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/home/peter/Desktop/isa-top/include -g -std=gnu++17 -o CMakeFiles/isa-top.dir/src/packetcapture.cpp.o -c /home/peter/Desktop/isa-top/src/packetcapture.cpp",
+  "file": "/home/peter/Desktop/isa-top/src/packetcapture.cpp",
+  "output": "CMakeFiles/isa-top.dir/src/packetcapture.cpp.o"
+},
+{
+  "directory": "/home/peter/Desktop/isa-top/build",
+  "command": "/usr/bin/g++  -I/usr/include/libnl3 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/home/peter/Desktop/isa-top/include -g -std=gnu++17 -o CMakeFiles/isa-top.dir/src/stats.cpp.o -c /home/peter/Desktop/isa-top/src/stats.cpp",
+  "file": "/home/peter/Desktop/isa-top/src/stats.cpp",
+  "output": "CMakeFiles/isa-top.dir/src/stats.cpp.o"
+},
+{
+  "directory": "/home/peter/Desktop/isa-top/build",
+  "command": "/usr/bin/g++  -I/usr/include/libnl3 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/home/peter/Desktop/isa-top/include -g -std=gnu++17 -o CMakeFiles/isa-top.dir/src/display.cpp.o -c /home/peter/Desktop/isa-top/src/display.cpp",
+  "file": "/home/peter/Desktop/isa-top/src/display.cpp",
+  "output": "CMakeFiles/isa-top.dir/src/display.cpp.o"
+},
+{
+  "directory": "/home/peter/Desktop/isa-top/build",
+  "command": "/usr/bin/g++  -I/usr/include/libnl3 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/home/peter/Desktop/isa-top/include -g -std=gnu++17 -o CMakeFiles/isa-top.dir/src/utils.cpp.o -c /home/peter/Desktop/isa-top/src/utils.cpp",
+  "file": "/home/peter/Desktop/isa-top/src/utils.cpp",
+  "output": "CMakeFiles/isa-top.dir/src/utils.cpp.o"
+}
+]
