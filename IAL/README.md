@@ -1,0 +1,1 @@
+archív domácich projektov z predmetu IAL (2023), takmer bezchybné riešenia
