@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+  <title> ITU ajax </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style type="text/css">
+  div, input { margin: 10px; }
+  </style>
+</head>
+<body>
+
+<div id="chatArea" style="height: 300px; border: solid #aaa 1px; overflow:auto;"></div> 
+
+<form onsubmit="return uploadData()">
+  <input type="text" id="newMessageString">
+  <input type="submit" value="send">
+</form>
+
+<div id="status" style="border: solid #aaa 1px; ">&nbsp;</div> 
+
+
+<script type="text/javascript">
+
+/***
+  * XMLHttpRequest object constructor (for compatibility with various browsers)
+  */
+function createXmlHttpRequestObject() 
+{
+    var request;
+    try
+    {
+        request = new XMLHttpRequest(); // should work on all browsers except IE6 or older
+    } 
+    catch (e) 
+    { 
+        try 
+        {
+            request = new ActiveXObject("Microsoft.XMLHttp"); // browser is IE6 or older
+        }
+        catch (e) 
+        {
+            // ignore error
+        }
+    }
+    if (!request) 
+    {
+        alert("Error creating the XMLHttpRequest object.");
+    } 
+    else 
+    {
+        return request;
+    }
+}
+
+const url = "https://pckiss.fit.vutbr.cz/itu/api.php";
+const XLOGIN = "xstahl01"
+let displayedMessages = new Set();
+
+function uploadData()
+{
+    document.getElementById("status").innerHTML = "uploadData()";
+
+    try 
+    {
+        var request = createXmlHttpRequestObject(); // stores XMLHttpRequestObject
+        //// put your code here
+        var message = document.getElementById("newMessageString").value;
+
+        request.open("POST", url, true);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.onreadystatechange = function() {
+            if (request.readyState == 4 && request.status == 200) {
+                document.getElementById("status").innerHTML = "Message sent";
+                document.getElementById("newMessageString").value = "";
+                downloadData();
+            }
+            else {
+                document.getElementById("status").innerHTML = "Error sending message";
+            }   
+        };
+        request.send("user=" + XLOGIN + "&data=" + message);
+
+    } 
+    catch (e) 
+    {
+        alert(e.toString());
+    }
+
+    return false; // to avoid default form submit behavior 
+}
+
+function downloadData() 
+{
+    //// put your code here
+
+    document.getElementById("status").innerHTML = "downloadData()";
+
+    try
+    {
+        var request = createXmlHttpRequestObject();
+
+        request.open("GET", url, true);
+        request.onreadystatechange = function(){
+            if (request.readyState == 4 && request.status == 200){
+                var pole = JSON.parse(request.responseText);
+                for (var i in pole){
+                    appendMessages(pole[i]);
+                }
+            }
+        };
+        request.send(null)
+    }
+    catch (e)
+    {
+        alert(e.toString())
+    }
+}
+
+//// put your code here
+function appendMessages(newMessages)
+{
+    let messageId = newMessages.id;
+
+    if (displayedMessages.has(messageId)){
+        return;
+    }
+    displayedMessages.add(messageId);
+
+    var div = document.createElement("div");
+    if (typeof newMessages == "object"){
+
+        var content = "";
+        for(var key in newMessages) {
+            if(newMessages.hasOwnProperty(key)){
+                content += key + ":" + newMessages[key] + "<br>";
+            }
+        }
+        div.innerHTML = content
+    }
+    else {
+        div.appendChild(document.createTextNode(newMessages));
+    }
+
+
+    var chatArea = document.getElementById("chatArea");
+    chatArea.appendChild(div);
+    chatArea.scrollTop = chatArea.scrollHeight;
+}
+
+setInterval(downloadData, 2000);
+</script>
+
+</body></html>
