@@ -1,0 +1,4 @@
+Peter Stahl (xstahl01):
+    ./doc/*     obsahuje zdrojovú (main.tex) a zostavenú (IMP.pdf) dokumentáciu
+    ./src/*     obsahuje vlastné riešenie programu písané v jazyku C++
+    ./research/* obsahuje modularizované riešenie main.cpp, súčasť skúmania implementácie
