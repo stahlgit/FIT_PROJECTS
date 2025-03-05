@@ -1,2 +1,2 @@
 # FIT_PROJECTS
-School Projects
+Projects to School as my personal folder for reminiscing
