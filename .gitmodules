@@ -4,3 +4,6 @@
 [submodule "IMS/fit_ims"]
 	path = IMS/fit_ims
 	url = git@github.com:stahlgit/fit_ims.git
+[submodule "IFJ/IFJcompilator"]
+	path = IFJ/IFJcompilator
+	url = git@github.com:HonzaSik/IFJcompilator.git
