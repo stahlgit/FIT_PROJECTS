@@ -1,3 +1,6 @@
 [submodule "IIS/fit_iis_project"]
 	path = IIS/fit_iis_project
 	url = https://github.com/stahlgit/fit_iis_project.git
+[submodule "IMS/fit_ims"]
+	path = IMS/fit_ims
+	url = git@github.com:stahlgit/fit_ims.git
