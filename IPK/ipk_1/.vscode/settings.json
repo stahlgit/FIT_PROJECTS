@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "*.tcc": "cpp",
+        "ostream": "cpp",
+        "string": "cpp",
+        "format": "cpp",
+        "compare": "cpp",
+        "cstdint": "cpp",
+        "iostream": "cpp",
+        "vector": "cpp",
+        "*.ipp": "cpp",
+        "bitset": "cpp",
+        "chrono": "cpp",
+        "memory_resource": "cpp",
+        "fstream": "cpp"
+    }
+}

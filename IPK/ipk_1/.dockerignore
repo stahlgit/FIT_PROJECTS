@@ -1,0 +1,10 @@
+src
+build
+.git
+.gitignore
+.idea
+.vscode
+README.md
+Makefile
+Dockerfile
+docker-compose.yml

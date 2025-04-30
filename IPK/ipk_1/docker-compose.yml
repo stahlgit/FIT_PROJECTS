@@ -1,0 +1,52 @@
+networks:
+  testnet:
+    driver: bridge
+    enable_ipv4: true
+    enable_ipv6: true
+    ipam:
+      config:
+        - subnet: "172.18.0.0/27"
+        - subnet: "fd00::/64"
+services:
+  tester:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: tester
+    cap_add:
+      - NET_RAW  # Allow raw socket access for ICMP/ARP
+    sysctls:
+      - net.ipv6.conf.all.accept_ra=1  # Accept IPv6 Router Advertisements
+    networks:
+      testnet:
+        ipv4_address: 172.18.0.5
+    depends_on:
+      - target1
+      - target2
+      - target3
+    stdin_open: true
+    tty: true
+
+  target1:
+    image: alpine
+    container_name: target1
+    networks:
+      testnet:
+        ipv6_address: "fd00::80"
+    command: ["sleep", "infinity"]
+
+  target2:
+    image: alpine
+    container_name: target2
+    networks:
+      testnet:
+        ipv6_address: "fd00::40"
+    command: ["sleep", "infinity"]
+
+  target3:
+    image: alpine
+    container_name: target3
+    networks:
+      testnet:
+        ipv6_address: "fd00::c0"
+    command: ["sleep", "infinity"]

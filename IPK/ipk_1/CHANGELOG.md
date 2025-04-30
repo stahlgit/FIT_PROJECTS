@@ -1,0 +1,3 @@
+Functionality seemed without problems while testing.
+I forgot to create gitea repository and realized it really late, I'm sorry for that.
+Biggest limitation was definitely that i struggled with running any tests generally.I tried running pytest in tester container, but those tests weren't really worthwhile. But in some edgecases, which i wasn't able to replicate without it NDP failed but ICMPv6 was running OK. I tried to track it with Wireshark, but it didn't happened outside Pytest. From that I deduced that the error must have been in my Pytest code writting (I don't use this platform often).
