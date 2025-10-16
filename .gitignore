@@ -1,1 +1,17 @@
 build/
+# Python cache files
+__pycache__/
+*.pyc
+.env
+.venv
+.pytest_cache/
+
+# PHP cache files
+vendor/
+tmp/
+composer.phar
+
+
+
+*.log
+*.DS_Store

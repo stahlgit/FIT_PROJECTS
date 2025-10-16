@@ -1,0 +1,871 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    COMMENT
+
+Grammar
+
+Rule 0     S' -> program
+Rule 1     program -> class_list
+Rule 2     class_list -> class_list class
+Rule 3     class_list -> class
+Rule 4     class -> CLASS IDENTIFIER COLON IDENTIFIER LBRACE method_list RBRACE
+Rule 5     method_list -> method_list method
+Rule 6     method_list -> method
+Rule 7     method -> IDENTIFIER block
+Rule 8     method -> method_name block
+Rule 9     method_name -> IDENTIFIER COLON
+Rule 10    method_name -> method_name IDENTIFIER COLON
+Rule 11    param_list -> param_list COLON IDENTIFIER
+Rule 12    param_list -> COLON IDENTIFIER
+Rule 13    param_list -> empty
+Rule 14    block -> LBRACKET block_params PIPE statement_list RBRACKET
+Rule 15    block_params -> param_list
+Rule 16    block_params -> empty
+Rule 17    statement_list -> statement_list statement
+Rule 18    statement_list -> statement
+Rule 19    statement_list -> empty
+Rule 20    statement -> assignment
+Rule 21    assignment -> IDENTIFIER ASSIGN expression DOT
+Rule 22    expression -> primary
+Rule 23    expression -> instruction
+Rule 24    instruction -> primary IDENTIFIER COLON primary
+Rule 25    instruction -> instruction IDENTIFIER COLON primary
+Rule 26    instruction -> primary IDENTIFIER
+Rule 27    instruction -> instruction IDENTIFIER COLON paren_expression
+Rule 28    instruction -> primary IDENTIFIER COLON paren_expression
+Rule 29    instruction -> paren_expression IDENTIFIER COLON primary
+Rule 30    instruction -> paren_expression IDENTIFIER
+Rule 31    instruction -> paren_expression
+Rule 32    primary -> INTEGER
+Rule 33    primary -> IDENTIFIER
+Rule 34    primary -> TRUE
+Rule 35    primary -> FALSE
+Rule 36    primary -> STRING
+Rule 37    primary -> NIL
+Rule 38    primary -> block
+Rule 39    primary -> concatenated_string
+Rule 40    concatenated_string -> STRING STRING
+Rule 41    concatenated_string -> concatenated_string STRING
+Rule 42    paren_expression -> LPAREN expression RPAREN
+Rule 43    empty -> <empty>
+
+Terminals, with rules where they appear
+
+ASSIGN               : 21
+CLASS                : 4
+COLON                : 4 9 10 11 12 24 25 27 28 29
+COMMENT              : 
+DOT                  : 21
+FALSE                : 35
+IDENTIFIER           : 4 4 7 9 10 11 12 21 24 25 26 27 28 29 30 33
+INTEGER              : 32
+LBRACE               : 4
+LBRACKET             : 14
+LPAREN               : 42
+NIL                  : 37
+PIPE                 : 14
+RBRACE               : 4
+RBRACKET             : 14
+RPAREN               : 42
+STRING               : 36 40 40 41
+TRUE                 : 34
+error                : 
+
+Nonterminals, with rules where they appear
+
+assignment           : 20
+block                : 7 8 38
+block_params         : 14
+class                : 2 3
+class_list           : 1 2
+concatenated_string  : 39 41
+empty                : 13 16 19
+expression           : 21 42
+instruction          : 23 25 27
+method               : 5 6
+method_list          : 4 5
+method_name          : 8 10
+param_list           : 11 15
+paren_expression     : 27 28 29 30 31
+primary              : 22 24 24 25 26 28 29
+program              : 0
+statement            : 17 18
+statement_list       : 14 17
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . program
+    (1) program -> . class_list
+    (2) class_list -> . class_list class
+    (3) class_list -> . class
+    (4) class -> . CLASS IDENTIFIER COLON IDENTIFIER LBRACE method_list RBRACE
+
+    CLASS           shift and go to state 4
+
+    program                        shift and go to state 1
+    class_list                     shift and go to state 2
+    class                          shift and go to state 3
+
+state 1
+
+    (0) S' -> program .
+
+
+
+state 2
+
+    (1) program -> class_list .
+    (2) class_list -> class_list . class
+    (4) class -> . CLASS IDENTIFIER COLON IDENTIFIER LBRACE method_list RBRACE
+
+    $end            reduce using rule 1 (program -> class_list .)
+    CLASS           shift and go to state 4
+
+    class                          shift and go to state 5
+
+state 3
+
+    (3) class_list -> class .
+
+    CLASS           reduce using rule 3 (class_list -> class .)
+    $end            reduce using rule 3 (class_list -> class .)
+
+
+state 4
+
+    (4) class -> CLASS . IDENTIFIER COLON IDENTIFIER LBRACE method_list RBRACE
+
+    IDENTIFIER      shift and go to state 6
+
+
+state 5
+
+    (2) class_list -> class_list class .
+
+    CLASS           reduce using rule 2 (class_list -> class_list class .)
+    $end            reduce using rule 2 (class_list -> class_list class .)
+
+
+state 6
+
+    (4) class -> CLASS IDENTIFIER . COLON IDENTIFIER LBRACE method_list RBRACE
+
+    COLON           shift and go to state 7
+
+
+state 7
+
+    (4) class -> CLASS IDENTIFIER COLON . IDENTIFIER LBRACE method_list RBRACE
+
+    IDENTIFIER      shift and go to state 8
+
+
+state 8
+
+    (4) class -> CLASS IDENTIFIER COLON IDENTIFIER . LBRACE method_list RBRACE
+
+    LBRACE          shift and go to state 9
+
+
+state 9
+
+    (4) class -> CLASS IDENTIFIER COLON IDENTIFIER LBRACE . method_list RBRACE
+    (5) method_list -> . method_list method
+    (6) method_list -> . method
+    (7) method -> . IDENTIFIER block
+    (8) method -> . method_name block
+    (9) method_name -> . IDENTIFIER COLON
+    (10) method_name -> . method_name IDENTIFIER COLON
+
+    IDENTIFIER      shift and go to state 10
+
+    method_list                    shift and go to state 11
+    method                         shift and go to state 12
+    method_name                    shift and go to state 13
+
+state 10
+
+    (7) method -> IDENTIFIER . block
+    (9) method_name -> IDENTIFIER . COLON
+    (14) block -> . LBRACKET block_params PIPE statement_list RBRACKET
+
+    COLON           shift and go to state 15
+    LBRACKET        shift and go to state 16
+
+    block                          shift and go to state 14
+
+state 11
+
+    (4) class -> CLASS IDENTIFIER COLON IDENTIFIER LBRACE method_list . RBRACE
+    (5) method_list -> method_list . method
+    (7) method -> . IDENTIFIER block
+    (8) method -> . method_name block
+    (9) method_name -> . IDENTIFIER COLON
+    (10) method_name -> . method_name IDENTIFIER COLON
+
+    RBRACE          shift and go to state 17
+    IDENTIFIER      shift and go to state 10
+
+    method                         shift and go to state 18
+    method_name                    shift and go to state 13
+
+state 12
+
+    (6) method_list -> method .
+
+    RBRACE          reduce using rule 6 (method_list -> method .)
+    IDENTIFIER      reduce using rule 6 (method_list -> method .)
+
+
+state 13
+
+    (8) method -> method_name . block
+    (10) method_name -> method_name . IDENTIFIER COLON
+    (14) block -> . LBRACKET block_params PIPE statement_list RBRACKET
+
+    IDENTIFIER      shift and go to state 20
+    LBRACKET        shift and go to state 16
+
+    block                          shift and go to state 19
+
+state 14
+
+    (7) method -> IDENTIFIER block .
+
+    RBRACE          reduce using rule 7 (method -> IDENTIFIER block .)
+    IDENTIFIER      reduce using rule 7 (method -> IDENTIFIER block .)
+
+
+state 15
+
+    (9) method_name -> IDENTIFIER COLON .
+
+    IDENTIFIER      reduce using rule 9 (method_name -> IDENTIFIER COLON .)
+    LBRACKET        reduce using rule 9 (method_name -> IDENTIFIER COLON .)
+
+
+state 16
+
+    (14) block -> LBRACKET . block_params PIPE statement_list RBRACKET
+    (15) block_params -> . param_list
+    (16) block_params -> . empty
+    (11) param_list -> . param_list COLON IDENTIFIER
+    (12) param_list -> . COLON IDENTIFIER
+    (13) param_list -> . empty
+    (43) empty -> .
+
+  ! shift/reduce conflict for COLON resolved as shift
+    COLON           shift and go to state 24
+    PIPE            reduce using rule 43 (empty -> .)
+
+  ! COLON           [ reduce using rule 43 (empty -> .) ]
+
+    block_params                   shift and go to state 21
+    param_list                     shift and go to state 22
+    empty                          shift and go to state 23
+
+state 17
+
+    (4) class -> CLASS IDENTIFIER COLON IDENTIFIER LBRACE method_list RBRACE .
+
+    CLASS           reduce using rule 4 (class -> CLASS IDENTIFIER COLON IDENTIFIER LBRACE method_list RBRACE .)
+    $end            reduce using rule 4 (class -> CLASS IDENTIFIER COLON IDENTIFIER LBRACE method_list RBRACE .)
+
+
+state 18
+
+    (5) method_list -> method_list method .
+
+    RBRACE          reduce using rule 5 (method_list -> method_list method .)
+    IDENTIFIER      reduce using rule 5 (method_list -> method_list method .)
+
+
+state 19
+
+    (8) method -> method_name block .
+
+    RBRACE          reduce using rule 8 (method -> method_name block .)
+    IDENTIFIER      reduce using rule 8 (method -> method_name block .)
+
+
+state 20
+
+    (10) method_name -> method_name IDENTIFIER . COLON
+
+    COLON           shift and go to state 25
+
+
+state 21
+
+    (14) block -> LBRACKET block_params . PIPE statement_list RBRACKET
+
+    PIPE            shift and go to state 26
+
+
+state 22
+
+    (15) block_params -> param_list .
+    (11) param_list -> param_list . COLON IDENTIFIER
+
+    PIPE            reduce using rule 15 (block_params -> param_list .)
+    COLON           shift and go to state 27
+
+
+state 23
+
+    (16) block_params -> empty .
+    (13) param_list -> empty .
+
+  ! reduce/reduce conflict for PIPE resolved using rule 13 (param_list -> empty .)
+    COLON           reduce using rule 13 (param_list -> empty .)
+    PIPE            reduce using rule 13 (param_list -> empty .)
+
+  ! PIPE            [ reduce using rule 16 (block_params -> empty .) ]
+
+
+state 24
+
+    (12) param_list -> COLON . IDENTIFIER
+
+    IDENTIFIER      shift and go to state 28
+
+
+state 25
+
+    (10) method_name -> method_name IDENTIFIER COLON .
+
+    IDENTIFIER      reduce using rule 10 (method_name -> method_name IDENTIFIER COLON .)
+    LBRACKET        reduce using rule 10 (method_name -> method_name IDENTIFIER COLON .)
+
+
+state 26
+
+    (14) block -> LBRACKET block_params PIPE . statement_list RBRACKET
+    (17) statement_list -> . statement_list statement
+    (18) statement_list -> . statement
+    (19) statement_list -> . empty
+    (20) statement -> . assignment
+    (43) empty -> .
+    (21) assignment -> . IDENTIFIER ASSIGN expression DOT
+
+  ! shift/reduce conflict for IDENTIFIER resolved as shift
+    RBRACKET        reduce using rule 43 (empty -> .)
+    IDENTIFIER      shift and go to state 33
+
+  ! IDENTIFIER      [ reduce using rule 43 (empty -> .) ]
+
+    statement_list                 shift and go to state 29
+    statement                      shift and go to state 30
+    empty                          shift and go to state 31
+    assignment                     shift and go to state 32
+
+state 27
+
+    (11) param_list -> param_list COLON . IDENTIFIER
+
+    IDENTIFIER      shift and go to state 34
+
+
+state 28
+
+    (12) param_list -> COLON IDENTIFIER .
+
+    COLON           reduce using rule 12 (param_list -> COLON IDENTIFIER .)
+    PIPE            reduce using rule 12 (param_list -> COLON IDENTIFIER .)
+
+
+state 29
+
+    (14) block -> LBRACKET block_params PIPE statement_list . RBRACKET
+    (17) statement_list -> statement_list . statement
+    (20) statement -> . assignment
+    (21) assignment -> . IDENTIFIER ASSIGN expression DOT
+
+    RBRACKET        shift and go to state 35
+    IDENTIFIER      shift and go to state 33
+
+    statement                      shift and go to state 36
+    assignment                     shift and go to state 32
+
+state 30
+
+    (18) statement_list -> statement .
+
+    RBRACKET        reduce using rule 18 (statement_list -> statement .)
+    IDENTIFIER      reduce using rule 18 (statement_list -> statement .)
+
+
+state 31
+
+    (19) statement_list -> empty .
+
+    RBRACKET        reduce using rule 19 (statement_list -> empty .)
+    IDENTIFIER      reduce using rule 19 (statement_list -> empty .)
+
+
+state 32
+
+    (20) statement -> assignment .
+
+    RBRACKET        reduce using rule 20 (statement -> assignment .)
+    IDENTIFIER      reduce using rule 20 (statement -> assignment .)
+
+
+state 33
+
+    (21) assignment -> IDENTIFIER . ASSIGN expression DOT
+
+    ASSIGN          shift and go to state 37
+
+
+state 34
+
+    (11) param_list -> param_list COLON IDENTIFIER .
+
+    COLON           reduce using rule 11 (param_list -> param_list COLON IDENTIFIER .)
+    PIPE            reduce using rule 11 (param_list -> param_list COLON IDENTIFIER .)
+
+
+state 35
+
+    (14) block -> LBRACKET block_params PIPE statement_list RBRACKET .
+
+    RBRACE          reduce using rule 14 (block -> LBRACKET block_params PIPE statement_list RBRACKET .)
+    IDENTIFIER      reduce using rule 14 (block -> LBRACKET block_params PIPE statement_list RBRACKET .)
+    DOT             reduce using rule 14 (block -> LBRACKET block_params PIPE statement_list RBRACKET .)
+    RPAREN          reduce using rule 14 (block -> LBRACKET block_params PIPE statement_list RBRACKET .)
+
+
+state 36
+
+    (17) statement_list -> statement_list statement .
+
+    RBRACKET        reduce using rule 17 (statement_list -> statement_list statement .)
+    IDENTIFIER      reduce using rule 17 (statement_list -> statement_list statement .)
+
+
+state 37
+
+    (21) assignment -> IDENTIFIER ASSIGN . expression DOT
+    (22) expression -> . primary
+    (23) expression -> . instruction
+    (32) primary -> . INTEGER
+    (33) primary -> . IDENTIFIER
+    (34) primary -> . TRUE
+    (35) primary -> . FALSE
+    (36) primary -> . STRING
+    (37) primary -> . NIL
+    (38) primary -> . block
+    (39) primary -> . concatenated_string
+    (24) instruction -> . primary IDENTIFIER COLON primary
+    (25) instruction -> . instruction IDENTIFIER COLON primary
+    (26) instruction -> . primary IDENTIFIER
+    (27) instruction -> . instruction IDENTIFIER COLON paren_expression
+    (28) instruction -> . primary IDENTIFIER COLON paren_expression
+    (29) instruction -> . paren_expression IDENTIFIER COLON primary
+    (30) instruction -> . paren_expression IDENTIFIER
+    (31) instruction -> . paren_expression
+    (14) block -> . LBRACKET block_params PIPE statement_list RBRACKET
+    (40) concatenated_string -> . STRING STRING
+    (41) concatenated_string -> . concatenated_string STRING
+    (42) paren_expression -> . LPAREN expression RPAREN
+
+    INTEGER         shift and go to state 42
+    IDENTIFIER      shift and go to state 38
+    TRUE            shift and go to state 43
+    FALSE           shift and go to state 44
+    STRING          shift and go to state 45
+    NIL             shift and go to state 46
+    LBRACKET        shift and go to state 16
+    LPAREN          shift and go to state 50
+
+    expression                     shift and go to state 39
+    primary                        shift and go to state 40
+    instruction                    shift and go to state 41
+    block                          shift and go to state 47
+    concatenated_string            shift and go to state 48
+    paren_expression               shift and go to state 49
+
+state 38
+
+    (33) primary -> IDENTIFIER .
+
+    IDENTIFIER      reduce using rule 33 (primary -> IDENTIFIER .)
+    DOT             reduce using rule 33 (primary -> IDENTIFIER .)
+    RPAREN          reduce using rule 33 (primary -> IDENTIFIER .)
+
+
+state 39
+
+    (21) assignment -> IDENTIFIER ASSIGN expression . DOT
+
+    DOT             shift and go to state 51
+
+
+state 40
+
+    (22) expression -> primary .
+    (24) instruction -> primary . IDENTIFIER COLON primary
+    (26) instruction -> primary . IDENTIFIER
+    (28) instruction -> primary . IDENTIFIER COLON paren_expression
+
+    DOT             reduce using rule 22 (expression -> primary .)
+    RPAREN          reduce using rule 22 (expression -> primary .)
+    IDENTIFIER      shift and go to state 52
+
+
+state 41
+
+    (23) expression -> instruction .
+    (25) instruction -> instruction . IDENTIFIER COLON primary
+    (27) instruction -> instruction . IDENTIFIER COLON paren_expression
+
+    DOT             reduce using rule 23 (expression -> instruction .)
+    RPAREN          reduce using rule 23 (expression -> instruction .)
+    IDENTIFIER      shift and go to state 53
+
+
+state 42
+
+    (32) primary -> INTEGER .
+
+    IDENTIFIER      reduce using rule 32 (primary -> INTEGER .)
+    DOT             reduce using rule 32 (primary -> INTEGER .)
+    RPAREN          reduce using rule 32 (primary -> INTEGER .)
+
+
+state 43
+
+    (34) primary -> TRUE .
+
+    IDENTIFIER      reduce using rule 34 (primary -> TRUE .)
+    DOT             reduce using rule 34 (primary -> TRUE .)
+    RPAREN          reduce using rule 34 (primary -> TRUE .)
+
+
+state 44
+
+    (35) primary -> FALSE .
+
+    IDENTIFIER      reduce using rule 35 (primary -> FALSE .)
+    DOT             reduce using rule 35 (primary -> FALSE .)
+    RPAREN          reduce using rule 35 (primary -> FALSE .)
+
+
+state 45
+
+    (36) primary -> STRING .
+    (40) concatenated_string -> STRING . STRING
+
+    IDENTIFIER      reduce using rule 36 (primary -> STRING .)
+    DOT             reduce using rule 36 (primary -> STRING .)
+    RPAREN          reduce using rule 36 (primary -> STRING .)
+    STRING          shift and go to state 54
+
+
+state 46
+
+    (37) primary -> NIL .
+
+    IDENTIFIER      reduce using rule 37 (primary -> NIL .)
+    DOT             reduce using rule 37 (primary -> NIL .)
+    RPAREN          reduce using rule 37 (primary -> NIL .)
+
+
+state 47
+
+    (38) primary -> block .
+
+    IDENTIFIER      reduce using rule 38 (primary -> block .)
+    DOT             reduce using rule 38 (primary -> block .)
+    RPAREN          reduce using rule 38 (primary -> block .)
+
+
+state 48
+
+    (39) primary -> concatenated_string .
+    (41) concatenated_string -> concatenated_string . STRING
+
+    IDENTIFIER      reduce using rule 39 (primary -> concatenated_string .)
+    DOT             reduce using rule 39 (primary -> concatenated_string .)
+    RPAREN          reduce using rule 39 (primary -> concatenated_string .)
+    STRING          shift and go to state 55
+
+
+state 49
+
+    (29) instruction -> paren_expression . IDENTIFIER COLON primary
+    (30) instruction -> paren_expression . IDENTIFIER
+    (31) instruction -> paren_expression .
+
+  ! shift/reduce conflict for IDENTIFIER resolved as shift
+    IDENTIFIER      shift and go to state 56
+    DOT             reduce using rule 31 (instruction -> paren_expression .)
+    RPAREN          reduce using rule 31 (instruction -> paren_expression .)
+
+  ! IDENTIFIER      [ reduce using rule 31 (instruction -> paren_expression .) ]
+
+
+state 50
+
+    (42) paren_expression -> LPAREN . expression RPAREN
+    (22) expression -> . primary
+    (23) expression -> . instruction
+    (32) primary -> . INTEGER
+    (33) primary -> . IDENTIFIER
+    (34) primary -> . TRUE
+    (35) primary -> . FALSE
+    (36) primary -> . STRING
+    (37) primary -> . NIL
+    (38) primary -> . block
+    (39) primary -> . concatenated_string
+    (24) instruction -> . primary IDENTIFIER COLON primary
+    (25) instruction -> . instruction IDENTIFIER COLON primary
+    (26) instruction -> . primary IDENTIFIER
+    (27) instruction -> . instruction IDENTIFIER COLON paren_expression
+    (28) instruction -> . primary IDENTIFIER COLON paren_expression
+    (29) instruction -> . paren_expression IDENTIFIER COLON primary
+    (30) instruction -> . paren_expression IDENTIFIER
+    (31) instruction -> . paren_expression
+    (14) block -> . LBRACKET block_params PIPE statement_list RBRACKET
+    (40) concatenated_string -> . STRING STRING
+    (41) concatenated_string -> . concatenated_string STRING
+    (42) paren_expression -> . LPAREN expression RPAREN
+
+    INTEGER         shift and go to state 42
+    IDENTIFIER      shift and go to state 38
+    TRUE            shift and go to state 43
+    FALSE           shift and go to state 44
+    STRING          shift and go to state 45
+    NIL             shift and go to state 46
+    LBRACKET        shift and go to state 16
+    LPAREN          shift and go to state 50
+
+    expression                     shift and go to state 57
+    primary                        shift and go to state 40
+    instruction                    shift and go to state 41
+    block                          shift and go to state 47
+    concatenated_string            shift and go to state 48
+    paren_expression               shift and go to state 49
+
+state 51
+
+    (21) assignment -> IDENTIFIER ASSIGN expression DOT .
+
+    RBRACKET        reduce using rule 21 (assignment -> IDENTIFIER ASSIGN expression DOT .)
+    IDENTIFIER      reduce using rule 21 (assignment -> IDENTIFIER ASSIGN expression DOT .)
+
+
+state 52
+
+    (24) instruction -> primary IDENTIFIER . COLON primary
+    (26) instruction -> primary IDENTIFIER .
+    (28) instruction -> primary IDENTIFIER . COLON paren_expression
+
+    COLON           shift and go to state 58
+    IDENTIFIER      reduce using rule 26 (instruction -> primary IDENTIFIER .)
+    DOT             reduce using rule 26 (instruction -> primary IDENTIFIER .)
+    RPAREN          reduce using rule 26 (instruction -> primary IDENTIFIER .)
+
+
+state 53
+
+    (25) instruction -> instruction IDENTIFIER . COLON primary
+    (27) instruction -> instruction IDENTIFIER . COLON paren_expression
+
+    COLON           shift and go to state 59
+
+
+state 54
+
+    (40) concatenated_string -> STRING STRING .
+
+    STRING          reduce using rule 40 (concatenated_string -> STRING STRING .)
+    IDENTIFIER      reduce using rule 40 (concatenated_string -> STRING STRING .)
+    DOT             reduce using rule 40 (concatenated_string -> STRING STRING .)
+    RPAREN          reduce using rule 40 (concatenated_string -> STRING STRING .)
+
+
+state 55
+
+    (41) concatenated_string -> concatenated_string STRING .
+
+    STRING          reduce using rule 41 (concatenated_string -> concatenated_string STRING .)
+    IDENTIFIER      reduce using rule 41 (concatenated_string -> concatenated_string STRING .)
+    DOT             reduce using rule 41 (concatenated_string -> concatenated_string STRING .)
+    RPAREN          reduce using rule 41 (concatenated_string -> concatenated_string STRING .)
+
+
+state 56
+
+    (29) instruction -> paren_expression IDENTIFIER . COLON primary
+    (30) instruction -> paren_expression IDENTIFIER .
+
+    COLON           shift and go to state 60
+    IDENTIFIER      reduce using rule 30 (instruction -> paren_expression IDENTIFIER .)
+    DOT             reduce using rule 30 (instruction -> paren_expression IDENTIFIER .)
+    RPAREN          reduce using rule 30 (instruction -> paren_expression IDENTIFIER .)
+
+
+state 57
+
+    (42) paren_expression -> LPAREN expression . RPAREN
+
+    RPAREN          shift and go to state 61
+
+
+state 58
+
+    (24) instruction -> primary IDENTIFIER COLON . primary
+    (28) instruction -> primary IDENTIFIER COLON . paren_expression
+    (32) primary -> . INTEGER
+    (33) primary -> . IDENTIFIER
+    (34) primary -> . TRUE
+    (35) primary -> . FALSE
+    (36) primary -> . STRING
+    (37) primary -> . NIL
+    (38) primary -> . block
+    (39) primary -> . concatenated_string
+    (42) paren_expression -> . LPAREN expression RPAREN
+    (14) block -> . LBRACKET block_params PIPE statement_list RBRACKET
+    (40) concatenated_string -> . STRING STRING
+    (41) concatenated_string -> . concatenated_string STRING
+
+    INTEGER         shift and go to state 42
+    IDENTIFIER      shift and go to state 38
+    TRUE            shift and go to state 43
+    FALSE           shift and go to state 44
+    STRING          shift and go to state 45
+    NIL             shift and go to state 46
+    LPAREN          shift and go to state 50
+    LBRACKET        shift and go to state 16
+
+    primary                        shift and go to state 62
+    paren_expression               shift and go to state 63
+    block                          shift and go to state 47
+    concatenated_string            shift and go to state 48
+
+state 59
+
+    (25) instruction -> instruction IDENTIFIER COLON . primary
+    (27) instruction -> instruction IDENTIFIER COLON . paren_expression
+    (32) primary -> . INTEGER
+    (33) primary -> . IDENTIFIER
+    (34) primary -> . TRUE
+    (35) primary -> . FALSE
+    (36) primary -> . STRING
+    (37) primary -> . NIL
+    (38) primary -> . block
+    (39) primary -> . concatenated_string
+    (42) paren_expression -> . LPAREN expression RPAREN
+    (14) block -> . LBRACKET block_params PIPE statement_list RBRACKET
+    (40) concatenated_string -> . STRING STRING
+    (41) concatenated_string -> . concatenated_string STRING
+
+    INTEGER         shift and go to state 42
+    IDENTIFIER      shift and go to state 38
+    TRUE            shift and go to state 43
+    FALSE           shift and go to state 44
+    STRING          shift and go to state 45
+    NIL             shift and go to state 46
+    LPAREN          shift and go to state 50
+    LBRACKET        shift and go to state 16
+
+    primary                        shift and go to state 64
+    paren_expression               shift and go to state 65
+    block                          shift and go to state 47
+    concatenated_string            shift and go to state 48
+
+state 60
+
+    (29) instruction -> paren_expression IDENTIFIER COLON . primary
+    (32) primary -> . INTEGER
+    (33) primary -> . IDENTIFIER
+    (34) primary -> . TRUE
+    (35) primary -> . FALSE
+    (36) primary -> . STRING
+    (37) primary -> . NIL
+    (38) primary -> . block
+    (39) primary -> . concatenated_string
+    (14) block -> . LBRACKET block_params PIPE statement_list RBRACKET
+    (40) concatenated_string -> . STRING STRING
+    (41) concatenated_string -> . concatenated_string STRING
+
+    INTEGER         shift and go to state 42
+    IDENTIFIER      shift and go to state 38
+    TRUE            shift and go to state 43
+    FALSE           shift and go to state 44
+    STRING          shift and go to state 45
+    NIL             shift and go to state 46
+    LBRACKET        shift and go to state 16
+
+    primary                        shift and go to state 66
+    block                          shift and go to state 47
+    concatenated_string            shift and go to state 48
+
+state 61
+
+    (42) paren_expression -> LPAREN expression RPAREN .
+
+    IDENTIFIER      reduce using rule 42 (paren_expression -> LPAREN expression RPAREN .)
+    DOT             reduce using rule 42 (paren_expression -> LPAREN expression RPAREN .)
+    RPAREN          reduce using rule 42 (paren_expression -> LPAREN expression RPAREN .)
+
+
+state 62
+
+    (24) instruction -> primary IDENTIFIER COLON primary .
+
+    IDENTIFIER      reduce using rule 24 (instruction -> primary IDENTIFIER COLON primary .)
+    DOT             reduce using rule 24 (instruction -> primary IDENTIFIER COLON primary .)
+    RPAREN          reduce using rule 24 (instruction -> primary IDENTIFIER COLON primary .)
+
+
+state 63
+
+    (28) instruction -> primary IDENTIFIER COLON paren_expression .
+
+    IDENTIFIER      reduce using rule 28 (instruction -> primary IDENTIFIER COLON paren_expression .)
+    DOT             reduce using rule 28 (instruction -> primary IDENTIFIER COLON paren_expression .)
+    RPAREN          reduce using rule 28 (instruction -> primary IDENTIFIER COLON paren_expression .)
+
+
+state 64
+
+    (25) instruction -> instruction IDENTIFIER COLON primary .
+
+    IDENTIFIER      reduce using rule 25 (instruction -> instruction IDENTIFIER COLON primary .)
+    DOT             reduce using rule 25 (instruction -> instruction IDENTIFIER COLON primary .)
+    RPAREN          reduce using rule 25 (instruction -> instruction IDENTIFIER COLON primary .)
+
+
+state 65
+
+    (27) instruction -> instruction IDENTIFIER COLON paren_expression .
+
+    IDENTIFIER      reduce using rule 27 (instruction -> instruction IDENTIFIER COLON paren_expression .)
+    DOT             reduce using rule 27 (instruction -> instruction IDENTIFIER COLON paren_expression .)
+    RPAREN          reduce using rule 27 (instruction -> instruction IDENTIFIER COLON paren_expression .)
+
+
+state 66
+
+    (29) instruction -> paren_expression IDENTIFIER COLON primary .
+
+    IDENTIFIER      reduce using rule 29 (instruction -> paren_expression IDENTIFIER COLON primary .)
+    DOT             reduce using rule 29 (instruction -> paren_expression IDENTIFIER COLON primary .)
+    RPAREN          reduce using rule 29 (instruction -> paren_expression IDENTIFIER COLON primary .)
+
+WARNING: 
+WARNING: Conflicts:
+WARNING: 
+WARNING: shift/reduce conflict for COLON in state 16 resolved as shift
+WARNING: shift/reduce conflict for IDENTIFIER in state 26 resolved as shift
+WARNING: shift/reduce conflict for IDENTIFIER in state 49 resolved as shift
+WARNING: reduce/reduce conflict in state 23 resolved using rule (param_list -> empty)
+WARNING: rejected rule (block_params -> empty) in state 23
+WARNING: Rule (block_params -> empty) is never reduced
