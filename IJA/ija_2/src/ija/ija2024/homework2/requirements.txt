@@ -1,0 +1,10 @@
+1. rozšírenie GameNodes + vyčistenie štruktúry
+2. vytvorenie Game::init()
+3. vytvorenie GameNode::light()
+4. vytvorenie GameNode::toString() 
+5. overenie GameNode::toString() TEST
+6. naštudovanie ijatool - observer
+7. implementácia 1. game init s light up
+8. priradenie Observeru --> use update
+9. Observer infinite loop
+10. upratanie kódu

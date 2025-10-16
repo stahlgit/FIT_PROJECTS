@@ -1,0 +1,16 @@
+1. rozšírenie implementácie o vyhodnotenie pripojenia jednotlivých políčiek ku zdroju
+2. rozšírenie tried z úlohy 1:
+    - public void Game::init() - inicializácia hry - rozviesti všetky políčka pripojené na zdroj
+    - public boolean GameNode::light() - overí, či je políčko pod prúdom (je napojené na zdroj energie)
+    - public String GameNode::toString() - vytvorí a vráti reťazec reprezentujúci informácie o uzle
+        - reťazec je vo formáte {Typ[pozícia][zoznam_konektorov]}
+            - Typ je E (prázne pole), B (žiarovka), L (vodič) alebo P (zdroj)
+            - pozícia je vo formáte [row@col]
+            - zoznam konektorov obsahuje zoznam názvu strán obsahujúci konektor, zoznam je oddelený čiarkou
+                a zoradení podľa svetových strán od NOTH po smeru hodinových ručičiek:
+                -      * Příklad pro vodič: {L[2@3][NORTH,WEST]}
+                       * Příklad pro prázdný uzel: {E[2@3][]}
+3. Observer tool:
+    - Objekt, který informuje o změně, je políčko. Při otočení nebo změně napojení na zdroj (políčko svítí/nesvítí)
+        informuje závislé objekty o změně. (Tuto část je nutné implementovat)
+    - Závislé objekty v reakci na notifikaci zjistí aktuální stav a zajistí správnou vizualizaci. (Tato část je implementována dodaným nástrojem)

@@ -7,3 +7,6 @@
 [submodule "IFJ/IFJcompilator"]
 	path = IFJ/IFJcompilator
 	url = git@github.com:HonzaSik/IFJcompilator.git
+[submodule "IJA/ija_project"]
+	path = IJA/ija_project
+	url = git@github.com:stahlgit/ija_project.git
