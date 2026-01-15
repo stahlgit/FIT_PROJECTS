@@ -13,3 +13,6 @@
 [submodule "ISA/ISA/snmp2otel"]
 	path = ISA/ISA/snmp2otel
 	url = git@github.com:stahlgit/snmp2otel.git
+[submodule "ISA/snmp2otel"]
+	path = ISA/snmp2otel
+	url = git@github.com:stahlgit/snmp2otel.git
