@@ -1,0 +1,281 @@
+/* layout */
+.cleaner {clear: both; height: 1px; font-size: 1px; display: block; padding: 0px; margin: 0px;}
+.hidden {display: none;}
+.fl {float: left;  display: inline;}
+.fr {float: right; display: inline;}
+.center {text-align: center;}
+.right {text-align: right;}
+.nw {white-space: nowrap;}
+IMG {border: 0px;}
+SPAN.txt {height: auto !important;}
+BODY, FORM, FIELDSET, UL, OL, H1, H2, H3, H4, H5 {padding: 0px; margin: 0px;}
+INPUT,TEXTAREA,SELECT {font-family: Verdana, sans-serif; font-size: 10px; color: #636363;}
+HTML, BODY {height: 100%;}
+
+BODY {background: url('../images/layout/backgrounds/bg-body.gif') top left repeat-x #d8eaf0; text-align: center; font-family: Verdana, sans-serif; font-size: 10px; color: #636363;}
+
+/* WIDE - na dalsim radku uprava kvuli sirce stranky - Petr Novak
+#main {width: 803px; margin-left: auto; margin-right: auto; text-align: left; position: relative;}
+*/
+/* Na následujícím øádku úprava pro ministerský proužek - Jiøí Vodka */
+
+#main {width: 1003px; margin-left: auto; margin-right: auto; text-align: left; position: relative;}
+/*#main {width: 1003px; margin-left: auto; margin-right: auto; margin-top: 0px; text-align: left; position: relative;} */
+
+/*************************************************************************************************************************/
+
+/* Header */
+
+/* WIDE - na dalsich 2 radcich uprava kvuli sirce stranky - Petr Novak
+#header-holder {background: url('../images/layout/backgrounds/bg-header-holder.jpg') 0px 0px  no-repeat; height: 174px; padding-top: 9px;}
+#header {margin-left: 12px; margin-right: 12px; height: 100%; background: url('../images/layout/backgrounds/bg-header.jpg') top left no-repeat #fff; padding-top: 11px; _padding-top: 0px; }
+*/
+#header-holder {background: url('../images/layout/backgrounds/bg-header-holder-wide.png') 0px 0px  no-repeat; height: 230px; padding-top: 0px;}
+#header {margin-left: 12px; margin-right: 12px; height: 100%; background: url('../images/layout/backgrounds/bg-header-wide.png') top left no-repeat #fff; padding-top: 1px; _padding-top: 0px; }
+H1 {position: relative; overflow: hidden; width: 398px; height: 60px; font-size: 15px; letter-spacing: -2px; margin-left: 27px; margin-top: 27px; margin-bottom: 27px; }
+H1 SPAN {position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; background: url('../images/layout/backgrounds/bg-logo.png') top left no-repeat; cursor: pointer; cursor: hand;}
+H1 SPAN.txt {top: 0px; left: 0px;} 
+H1 A {color: #006eb3; text-decoration: none; text-transform: uppercase;}
+/* WIDE - na dalsim radku uprava kvuli sirce stranky - Petr Novak
+#links {color: #a5a5a5; width: 400px; position: absolute; right: 15px; top: 30px; text-align: right;}
+*/
+#links {color: #a5a5a5; width: 600px; position: absolute; right: 15px; top: 30px; text-align: right;}
+#links A {position: relative; overflow: hidden; height: 12px; display: block; color: #a5a5a5; text-transform: uppercase; text-decoration: none; font-size: 8px; float: right; display: inline; margin-top: 4px;}
+#links SPAN {margin-top: 4px;}
+#links A:hover {color: #000;}
+#links A SPAN {position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; cursor: pointer; cursor: hand; background-position: top left; background-repeat: no-repeat; margin-top: 0px;}
+#links A:hover SPAN {background-position: 0px -12px;}
+#link-sitemap {color: #bc0;width: 64px;}
+#link-sitemap SPAN {background-image: url('../images/layout/backgrounds/bg-link-sitemap.gif');}
+#link-english {width: 37px;}
+#link-english SPAN {background-image: url('../images/layout/backgrounds/bg-link-english.gif');}
+
+#search {float: right; display: inline; width: 240px;}
+#search FIELDSET {border: 0px;}
+#search INPUT {float: left;}
+#search INPUT.txt {background: url('../images/layout/backgrounds/bg-search.gif') top left no-repeat;background-color: #f1f1f1; border: 0px; padding-left: 18px; padding-top: 4px; height: 16px; _height: 20px; _heig\ht: 16px; width: 150px;}
+
+#banners {padding-top: 0px; padding-left: 3px; height: 83px; overflow: hidden;}
+#banners A {margin-top: 0px; float: left; display: inline; border-right: 2px solid #fff;}
+
+#nav {clear: both;}
+#nav UL {}
+#nav LI {float: left; display: inline; list-style-type: none; }
+#nav LI A {position: relative; overflow: hidden; display: block; color: #2d2d2d; text-decoration: none; text-align: center; font-size: 10px; text-transform: uppercase; height: 32px;}
+#nav LI A:hover {color: #fff;}
+#nav LI A:hover SPAN {background-position: 0 -32px !important;}
+#nav LI LI A:hover {color: #1078b9;}
+#nav LI A SPAN {position: absolute; top: 0px; left: 0px; width: 100%; display: block; padding-top: 10px; padding-bottom: 10px; cursor: pointer; cursor: hand; background-repeat: no-repeat; background-position: top left;}
+
+.fake-nav-space {position: absolute; width: 1px; height: 100%; _height: 23px; z-index:10; top: -1px; left: -1px; background-color: #fff; filter: Alpha(opacity='0'); -moz-opacity:.0;}
+
+#nav LI LI {float: none; position: relative;}
+#main #nav LI LI A {text-align: left;  text-transform: none; height: auto; color: #fff;}
+#main #nav LI LI A SPAN {position: static; padding: 0px; display: block; background: url('../images/layout/crumbs/blank.gif') top left no-repeat; padding: 5px 8px 6px 8px; _width: 136px; _wid\th: 120px;}
+#nav .submnu {position:absolute; visibility: hidden; z-index: 10; margin-left: 0px; width: 140px; border-top: 1px solid #1078b9; border-bottom: 2px solid #1078b9;}
+#nav .submnu .submnu {margin-left: 141px; top: -0px; _top: -1px;}
+#nav LI:hover .submnu {visibility: visible; margin-top: -1px;}
+#nav LI:hover A {color: #fff;}
+#nav LI:hover A SPAN {background-position: 0 -32px;}
+#main #nav LI LI:hover A {background-color: #98c8e8; font-weight: bold; color: #1078b9;}
+#main #header #nav LI LI LI A {background-color: #1078b9; font-weight: normal; color: #fff; border-top: 1px solid #3990c7;}
+#main #header #nav LI LI LI.first A {border-top: 1px solid #1078b9;}
+#main #header #nav LI LI LI A:hover {background-color: #98c8e8; font-weight: bold; color: #1078b9;}
+
+#nav LI LI A {background-color: #1078b9; line-height: 10px; font-size: 9px; border-left: 2px solid #1078b9; border-right: 2px solid #1078b9; border-top: 1px solid #3990c7;}
+#nav LI LI.first A {border-top: 1px solid #1078b9;}
+#main #nav LI LI A:hover {color: #1078b9 !important; background-color:#98c8e8 !important; font-weight: bold !important;}
+#nav LI:hover .submnu .submnu {visibility: hidden;}
+#nav .submnu LI:hover .submnu {visibility: visible;}
+
+/*#nav #nav-1 {width: 90px;}
+#nav #nav-1 SPAN {background-image: url('../images/layout/nav/nav1.gif');}
+#nav #nav-1 #submnu-1 {margin-left: 4px;}*/
+#nav #nav-2 {width: 129px;}
+#nav #nav-2 SPAN {background-image: url('../images/layout/nav/nav2.gif');}
+#nav #nav-3 {width: 118px;}
+#nav #nav-3 SPAN {background-image: url('../images/layout/nav/nav3.gif');}
+#nav #nav-4 {width: 67px;}
+#nav #nav-4 SPAN {background-image: url('../images/layout/nav/nav4.gif');}
+#nav #nav-5 {width: 75px;}
+#nav #nav-5 SPAN {background-image: url('../images/layout/nav/nav5.gif');}
+#nav #nav-6 {width: 85px;}
+#nav #nav-6 SPAN {background-image: url('../images/layout/nav/nav6.gif');}
+#nav #nav-7 {width: 70px;}
+#nav #nav-7 SPAN {background-image: url('../images/layout/nav/nav7.gif');}
+#nav #nav-8 {width: 90px;}
+#nav #nav-8 SPAN {background-image: url('../images/layout/nav/nav8.gif');}
+#nav #nav-8 #submnu-8 {margin-left: 4px;}
+#nav #nav-9 {width: 118px;}
+#nav #nav-9 SPAN {background-image: url('../images/layout/nav/nav9.gif');}
+#nav #nav-10 {width: 65px;}
+#nav #nav-10 SPAN {background-image: url('../images/layout/nav/nav-interni.gif');}
+
+/*************************************************************************************************************************/
+
+
+/* Content */
+
+/* WIDE - na dalsich 3 radcich uprava kvuli sirce stranky - Petr Novak
+#content-holder {background: url('../images/layout/backgrounds/bg-content-holder.jpg') top left repeat-y; min-height: 557px; height: auto; _height: 557px; }
+#content {background: url('../images/layout/backgrounds/bg-content.jpg') top left no-repeat; min-height: 557px; height: auto; _height: 557px;}
+#content-body {min-height: 557px; height: auto; _height: 557px; background: url('../images/layout/backgrounds/bg-content-body.jpg') top left repeat-y #fff; margin-left: 12px; margin-right: 12px; padding-bottom: 20px; padding-top: 12px;}
+*/
+#content-holder {background: url('../images/layout/backgrounds/bg-content-holder-wide.png') top left repeat-y; min-height: 557px; height: auto; _height: 557px; }
+#content {background: url('../images/layout/backgrounds/bg-content-wide.png') top left no-repeat; min-height: 557px; height: auto; _height: 557px;}
+#content-body {min-height: 557px; height: auto; _height: 557px; background: url('../images/layout/backgrounds/bg-content-body-wide.png') top left repeat-y #fff; margin-left: 12px; margin-right: 12px; padding-bottom: 20px; padding-top: 12px;}
+#content-body A {color: #5faa2d;}
+#content-body A.archive {font-weight: bold; text-decoration: none;}
+#content-body A.archive SPAN {font-size: 9px; letter-spacing: -3px;}
+#content-body A.next {font-weight: bold; text-decoration: none; color: #8997af;}
+#content-body A.next SPAN {font-size: 9px; letter-spacing: -3px;}
+#content-body A.detail {font-weight: bold; text-decoration: none; color: #8d0000;}
+#content-body A.detail SPAN {font-size: 9px; letter-spacing: -3px;}
+
+#warnings {border: 1px solid #bfbfbf; background: url('../images/layout/backgrounds/bg-warnings.gif') top left repeat-x #eef2f4;; position: relative; min-height: 40px; height: auto; _height: 40px;}
+#warnings #warnings-numbers {position: absolute; top: -1px; right: -1px; _right: -2px;}
+#warnings #warnings-numbers A {position: relative; width: 29px; padding-bottom: 5px; background: url('../images/layout/backgrounds/bg-warnings-number.gif') top left no-repeat; float: left; background-color: #fff; text-align: center; padding-top: 7px; font-family: Arial, sans-serif; font-size: 9px; color: #4e4e4e; text-decoration: none;}
+#warnings #warnings-numbers A SPAN {margin-top: 5px; padding-top: 1px; padding-left: 4px; padding-right: 4px; margin-right: 3px;}
+#main #warnings #warnings-numbers A.act {background-position: 0 -24px;}
+#warnings #warnings-numbers A.act SPAN {color: #FFF; background: url('../images/layout/backgrounds/bg-warnings-number-numero.gif') top left repeat-x #c31a1a;}
+#warnings #warnings-numbers A.last {background: url('../images/layout/backgrounds/bg-warnings-number-last.gif') top left no-repeat #fff;}
+#warnings #warnings-numbers A.first {background: url('../images/layout/backgrounds/bg-warnings-number-first.gif') top left no-repeat #fff; width: 38px;}
+#warnings #warnings-numbers A.first SPAN {margin-right: -6px;}
+#warnings .warnings-text {float: left; display: inline; width: 680px; padding-top: 5px; padding-bottom: 5px;}
+#warnings .warnings-text P {margin: 0px; color: #e10000; line-height: 10px; margin-left: 16px;}
+#warnings #warnings-body {background-color: #fff;}
+/*#warnings A.detail {margin-top: 14px; margin-right: 10px;}*/
+#warnings H3 {width: 120px; height: 21px; border-left: 1px solid #fff; border-top: 1px solid #fff; color: #c31a1a;}
+#warnings H3 SPAN {background: url('../images/content/headings/h3-warnings.gif') top left no-repeat;}
+#warnings H3 SPAN.txt {top: 2px; left: 16px;}
+
+
+.home {padding-left: 12px; padding-right: 12px;}
+
+
+.home #left-content {float: left; display: inline; width: 688px;}
+
+
+#box-weather {padding-top: 12px;}
+#weather-bookmarks A {float: left; display: inline; height: 25px; position: relative; overflow: hidden; font-size: 11px; text-transform: uppercase; text-decoration: none; font-weight: bold; background-color: #eef2f4;}
+#main #weather-bookmarks A.act SPAN {background-position: 0 -25px;}
+#main #weather-bookmarks A SPAN {position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; cursor: hand;}
+
+#main #bookmark-weather {width: 100px; left: -8px; color: #0086B8;}
+#weather-bookmarks SPAN.txt {top: 5px; left: 20px;}
+#bookmark-weather SPAN {background: url('../images/layout/backgrounds/bg-bookmark-pocasi.png') top left no-repeat;}
+
+#main #bookmark-air {width: 100px; left: -8px; color: #58A91E;}
+#bookmark-air SPAN {background: url('../images/layout/backgrounds/bg-bookmark-ovzdusi.png') top left no-repeat;}
+#bookmark-air A.act SPAN {background-color: #58a91e}
+
+#main #bookmark-hydrology {width: 100px; left: -8px; color: #0C60C1;}
+#bookmark-hydrology SPAN {background: url('../images/layout/backgrounds/bg-bookmark-voda.png') top left no-repeat;}
+#bookmark-hydrology A.act SPAN {background-color: #0c60c1;}
+#weather-content {clear: both; border: 1px solid #BFBFBF; min-height: 50px; height: auto; _height: 50px; margin-top: -2px; _margin-top: -3px;}
+#weather-content H4 {color: #00678D; font-weight: bold; font-size: 10px; margin-top: 0.5em; margin-left: 10px;}
+
+#main #bookmark-vystraha {width: 100px; left: -8px; color: #0C60C1;}
+#bookmark-vystraha SPAN {background: url('../images/layout/backgrounds/bg-bookmark-vystraha.png') top left no-repeat;}
+#bookmark-vystraha A.act SPAN {background-color: #0c60c1;}
+
+#weather-content {clear: both; border: 1px solid #BFBFBF; min-height: 50px; height: auto; _height: 50px; margin-top: -2px; _margin-top: -3px;}
+#weather-content H4 {color: #00678D; font-weight: bold; font-size: 10px; margin-top: 0.5em; margin-left: 10px;}
+
+/* #weather-content .today {width: 400px; float: left; display: inline;} -- rozsireni mapy pocasi (Ruzicka)*/
+#weather-content .today {width: 560px; float: left; display: inline;}
+/*#weather-content .other-days {width: 83px; float: left; display: inline;} -- rozsireni mapy pocasi (Ruzicka) */
+#weather-content .other-days {width: 123px; float: left; display: inline;} 
+#weather-content .other-days DIV {background: url('../images/layout/backgrounds/bg-weather-other-day.png') top left no-repeat; min-height: 80px; height: auto; _height: 80px; text-align: center; border-top: 1px solid #bfbfbf;}
+#weather-content .other-days DIV.first {border-top: 0px;}
+#weather-content .other-days DIV H4 {margin-left: 0px; margin-top: 0px; padding-top: 0.5em;}
+#weather-content .other-days DIV IMG {margin-top: 7px;}
+#weather-content .other-days DIV P {font-weight: bold; color: #000; margin-top: 0; margin-bottom: 0.6em;}
+/*#weather-links {background-color: #eef2f4; min-height: 40px; height: auto; _height: 40px; padding-top: 5px; padding-bottom: 5px;}*/
+#weather-links {background-color: #ffffff; min-height: 40px; height: auto; _height: 40px; padding-top: 5px; padding-bottom: 5px;}
+#weather-links A {font-weight: bold; text-decoration: none; color: #1893c0;  width: 140px; font-size: 9px; margin-left: 20px; float: left; display: inline;}
+#weather-links A SPAN {font-size: 9px; letter-spacing: -3px;}
+
+#box-actualities  {padding-left: 20px; margin-top: 20px; padding-right: 1px;}
+#box-actualities H3 {width: 120px; height: 20px; margin-top: 1px; margin-left: 1px; color: #006eb3; margin-left: -20px;}
+#box-actualities H3 SPAN {background: url('../images/content/headings/h3-actualities.gif') top left no-repeat;}
+#box-actualities H3 SPAN.txt {left: 17px; top: 2px;}
+#box-actualities H4 {background: url('../images/layout/crumbs/square-grey.gif') 0px 4px no-repeat; padding-left: 8px; font-size: 10px; margin-left: -8px; margin-top: 1em;}
+#box-actualities H4 A {color: #006eb3; text-decoration: none;}
+#box-actualities P {margin-bottom: 0em; margin-top: 0em;}
+
+#box-zpravy-chmu  {padding-left: 20px; margin-top: 20px; padding-right: 1px;}
+#box-zpravy-chmu H3 {width: 190px; height: 20px; margin-top: 1px; margin-left: 1px; color: #006eb3; margin-left: -20px;}
+#box-zpravy-chmu H3 SPAN {background: url('../images/content/headings/h3-zpravy-chmu.gif') top left no-repeat;}
+#box-zpravy-chmu H3 SPAN.txt {left: 17px; top: 2px;}
+#box-zpravy-chmu H4 {background: url('../images/layout/crumbs/square-grey.gif') 0px 4px no-repeat; padding-left: 8px; font-size: 10px; margin-left: -8px; margin-top: 1em;}
+#box-zpravy-chmu H4 A {color: #006eb3; text-decoration: none;}
+#box-zpravy-chmu P {margin-bottom: 0em; margin-top: 0em;}
+
+.home #right-content {float: left; display: inline; margin-left: 12px; width: 258px;}
+.home #right-content .box-white {border-right: 1px solid #bfbfbf; border-top: 1px solid #bfbfbf; position: relative; padding-left: 8px; padding-right: 8px;}
+.home #right-content .box-white .corner-top-right {width: 11px; height: 11px; position: absolute; top: -1px; right: -1px; _top: 0px; _right: 0px; background: url('../images/layout/backgrounds/bg-box-white-corner-top-right.gif') top right no-repeat;}
+.home #right-content .box-white H4 {font-weight: bold; font-size: 10px; color: #006eb3; margin: 0px;}
+.home #right-content .box-white H4 A {color: #006eb3; text-decoration: none;}
+.home #right-content .box-white H4 A:hover {color: #006eb3; text-decoration: underline;}
+.home #right-content .box-white H5 {font-weight: normal; font-family: Arial, sans-serif; font-size: 9px; color: #006eb3; margin: 0px; background: url('../images/layout/crumbs/square-green.gif') 0px 4px no-repeat; padding-left: 8px; margin-left: -8px; margin-top: 1em;}
+.home #right-content .box-white P {margin: 0px;}
+.home #right-content .box-grey {border: 1px solid #bfbfbf; background: url('../images/layout/backgrounds/bg-box-grey.gif') top left repeat-x #edf1f2; position: relative; }
+.home #right-content .box-grey .corner-bottom-left {width: 11px; height: 11px; position: absolute; bottom: -1px; left: -1px; _bottom: -2px; _left: -1px; background: url('../images/layout/backgrounds/bg-box-grey-corner-bottom-left.gif') top left no-repeat;}
+.home #right-content .box-grey .corner-top-right {width: 11px; height: 11px; position: absolute; top: -1px; right: -1px; background: url('../images/layout/backgrounds/bg-box-grey-corner-top-right.gif') top left no-repeat;}
+.home #right-content .box-grey-inner-border {border: 1px solid #FFF;}
+.home #right-content .box-grey FIELDSET {border: 0px;}
+
+
+#box-login {min-height: 82px; height: auto; _height: 82px; margin-top: 2em;}
+#box-login .box-grey-inner-border {min-height: 82px; height: auto; _height: 82px;}
+#box-login FORM {padding-left: 10px; padding-right: 6px;}
+/* oprava logovaciho formulare - presahovani jednotlivych poli (Ruzicka)
+#box-login .box-grey-inner-border FORM DIV {float: left; display: inline; width: 100px; margin-left: 10px;}
+*/
+#userId, #password {width: 110px;}
+
+#box-login .box-grey-inner-border FORM DIV {float: left; display: inline; width: 140px; margin-left: 10px;}
+#box-login INPUT.txt {border: 1px solid #dcdfe4; height: 14px; _height: 18px; _heig\ht: 14px; width: 98px;}
+#box-login LABEL {color: #006eb3; font-size: 9px;}
+#box-login H3 {width: 120px; height: 20px; margin-top: 1px; margin-left: 1px; color: #006eb3;}
+#box-login H3 SPAN {background: url('../images/content/headings/h3-login.gif') top left no-repeat;}
+#box-login H3 SPAN.txt {left: 17px; top: 2px;}
+
+
+
+.box-title {position: relative; overflow: hidden; font-size: 11px; text-transform: uppercase;}
+.box-title SPAN {position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;}
+#title-box-news {width: 120px; height: 16px; margin-top: 16px; margin-bottom: 4px; color: #006eb3;}
+#title-box-news SPAN {background: url('../images/content/headings/h3-news.gif') top left no-repeat;}
+#title-box-news SPAN.txt {left: 20px; top: 2px;}
+#title-box-partners {width: 120px; height: 16px; margin-top: 2em; margin-bottom: 4px; margin-left: 1px; color: #55a420;}
+#title-box-partners SPAN {background: url('../images/content/headings/h3-partners.gif') top left no-repeat;}
+#title-box-partners SPAN.txt {left: 16px; top: 2px;}
+/*************************************************************************************************************************/
+
+
+/* Footer */
+
+/* WIDE - na dalsich 2 radcich uprava kvuli sirce stranky - Petr Novak
+#footer-holder {background: url('../images/layout/backgrounds/bg-footer-holder.jpg') top left no-repeat; height: 65px;}
+#footer {margin-left: 12px; margin-right: 12px; background: url('../images/layout/backgrounds/bg-footer.jpg') top left no-repeat #fff; height: 53px;}
+*/
+
+#footer-holder {background: url('../images/layout/backgrounds/bg-footer-holder-wide.png') top left no-repeat; height: 65px;}
+#footer {margin-left: 12px; margin-right: 12px; background: url('../images/layout/backgrounds/bg-footer-wide.png') top left no-repeat #fff; height: 53px;}
+#footer #secondary-menu {padding-left: 32px; color: #0589ba; font-size: 9px; font-family: Arial, sans-serif;}
+#footer #secondary-menu A {color: #14387f; text-decoration: none; margin-left: 3px; margin-right: 3px;}
+#footer #secondary-menu A:hover {text-decoration: underline;}
+#footer #secondary-menu .links {margin-top: 5px; color: #838383;}
+#footer #secondary-menu .links A {color: #030303;}
+#footer #certifikaty {position: relative; overflow: hidden; width: 139px; height: 11px; float: right; display: inline; color: #4b4b4b; text-transform: uppercase; font-size: 9px;}
+#footer #certifikaty SPAN {position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; background: url('../images/layout/backgrounds/bg-certifikaty.png') bottom no-repeat;}
+#footer #certifikaty A.fake {position: absolute; top: 0px; right: 0px; width: 127px; height: 100%; display: block; z-index: 2;}
+#footer #certifikaty A {color: #8a0000;}
+#footer #copyright {position: relative; overflow: hidden; width: 300px; height: 11px; float: right; margin-right: 12px; display: inline; color: #4b4b4b; text-transform: uppercase; font-size: 9px; letter-spacing: -1px; text-align: right;}
+#footer #copyright SPAN {position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; background: url('../images/layout/backgrounds/bg-copyright.png') top right no-repeat;}
+#footer #copyright A.fake {position: absolute; top: 0px; right: 0px; width: 48px; height: 100%; display: block; z-index: 2;}
+#footer #copyright A {color: #8a0000;}
+
+/*************************************************************************************************************************/

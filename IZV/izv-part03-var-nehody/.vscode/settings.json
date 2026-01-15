@@ -1,0 +1,35 @@
+{
+  // --- Editor Settings ---
+
+  // Use Ruff as the formatter
+  "editor.defaultFormatter": "charliermarsh.ruff",
+  // Format + lint on save
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  // Optional: save without delay before formatting
+  "editor.formatOnSaveMode": "file",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+
+  // --- Mypy Settings ---
+  "mypy-type-checker.enabled": true,
+  "mypy-type-checker.args": ["--strict", "--show-error-codes"],
+  "mypy-type-checker.importStrategy": "fromEnvironment",
+  "mypy-type-checker.interpreter": ["${workspaceFolder}/.venv/bin/python"],
+  "mypy-type-checker.exclude": ["migrations"],
+
+  // --- Python Settings ---
+  "python.defaultInterpreterPath": ".venv/bin/python",
+  "python.analysis.extraPaths": ["./app"],
+  "python.analysis.typeCheckingMode": "off", // or "strict"
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportGeneralTypeIssues": "warning" // or "error"
+  },
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.exclude": ["**/migrations/**"]
+}

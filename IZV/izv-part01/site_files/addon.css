@@ -1,0 +1,1156 @@
+
+/* drobne fixy originalniho html designu 
+   - zavadejte az po chmu.cs */
+
+
+div#nav {
+/* WIDE - na dalsim radku uprava kvuli sirce stranky - Petr Novak
+	background: url('../images/layout/nav/nav-bg.gif') no-repeat top left;
+	width: 776px;
+        height: 32px;
+*/
+	background: url('../images/layout/nav/nav-bg-wide.png') no-repeat top left;
+	width: 976px;
+  height: 32px;
+}
+
+
+div.box {
+       border: 1px solid #bfbfbf;
+       background: url('../images/layout/backgrounds/bg-title.gif') top left repeat-x #eef2f4;
+       position: relative; min-height: 30px; height: auto; _height: 30px;
+}
+
+#weather-box h3 { display: none }
+
+div.box H3 {min-height: 21px; _height: 21px; border-left: 1px solid #fff; border-top: 1px solid #fff; color: #c31a1a;}
+.box-buttons {position: absolute; top: 2px; right: 2px; _right: 1px;}
+
+div.box-body {
+	background-color: #fff;
+        min-height: 30px; height: auto; _height: 30px;
+        padding-left: 3px;
+}
+
+div.box-body ol,
+div.box-body ul {
+        margin: 10px 20px 10px 20px;
+}
+
+div.box-body PRE {font-family: verdana, sans-serif;font-size: 10px; color: #636363;}
+
+/* WIDE - na dalsim radku uprava kvuli sirce stranky - Petr Novak*/
+.home #right-content {float: right; display: inline; margin-left: 12px; width: 255px;}
+
+/* .home #right-content {float: right; display: inline; margin-left: 12px; width: 458px;}*/
+
+
+div#box-actualities .box-title  {padding-left: 20px; margin-top: 20px; padding-right: 10px;}
+div#box-news .box-title {width: 120px; height: 16px; margin-top: 16px; margin-bottom: 4px; color: #006eb3;}
+div#box-partners .box-title {width: 120px; height: 16px; margin-top: 2em; margin-bottom: 4px; margin-left: 1px; color: #55a420;}
+
+div#box-partners .box-title SPAN {background: url('../images/content/headings/h3-partners.gif') top left no-repeat;}
+
+div#right-content div.box {
+	margin-top: 2em;
+	background: #fff;
+	border: none;
+}
+
+div#right-content div.box div.box-body {
+       border-right: 1px solid #bfbfbf;
+       border-top: 1px solid #bfbfbf; 
+       position: relative;
+       padding-left: 8px;
+       padding-right: 8px;
+
+}
+
+div#right-content div.box div.box-body div.corner-top-right {
+       position: absolute;
+       width: 11px;
+       height: 11px;
+       top: -1px;
+       right: -1px;
+       _top: -1px;
+       _right: -2px; /* muj MSIE je nejaky divny ... */
+       background: url('../images/layout/backgrounds/bg-box-white-corner-top-right.gif') top right no-repeat;
+}
+
+
+div#box-news .box-title SPAN {background: url('../images/content/headings/h3-news.gif') top left no-repeat;}
+
+.box-body H4 {font-weight: bold; font-size: 10px; color: #006eb3; margin: 0px;}
+.box-body H4 A {color: #006eb3; text-decoration: none;}
+.box-body H4 A:hover {color: #006eb3; text-decoration: underline;}
+.box-body H5 {font-weight: normal; font-family: Arial, sans-serif; font-size: 9px; color: #006eb3; margin: 0px; background: url('../images/layout/crumbs/square-green.gif') 0px 4px no-repeat; padding-left: 8px; margin-left: -8px; margin-top: 1em;}
+.box-body P {margin: 0px;}
+
+div#left-content  .box {
+	background: #fff;
+	border: none;
+	margin-top: 2em;
+}
+
+div#left-content .box .box-body {
+	background: #fff;
+	border: none;
+}
+
+div#box-actualities div.box-body {
+  padding-left: 8px; margin-top: 20px; padding-right: 10px;
+  margin-left: -8px;
+
+}
+
+div#box-actualities div.box-body H4 {background: url('../images/layout/crumbs/square-grey.gif') 0px 4px no-repeat; padding-left: 8px; font-size: 10px; margin-left: -8px; margin-top: 1em;}
+div#box-actualities div.box-body H4 A {color: #006eb3; text-decoration: none;}
+div#box-actualities div.box-body P {margin-bottom: 0em; margin-top: 0em;}
+
+div#weather-content {
+    border: 1px solid #bfbfbf !important;
+}
+
+div.box {
+    margin-top: 2em;
+}
+
+
+#weather-bookmarks {
+	height: 25px;
+	position: relative;
+	top: -25px;
+        width: 680px;
+        left: 4px;
+}
+
+
+div.content-column .box-grey {border: 1px solid #bfbfbf; background: url('../images/layout/backgrounds/bg-box-grey.gif') top left repeat-x #edf1f2; position: relative; }
+
+#box-login, #box-logout { 
+    min-height: 82px; height: auto; _height: 82px; margin-top: 2em;
+}
+
+div.content-column .box-grey .corner-bottom-left {width: 11px; height: 11px; position: absolute; bottom: -1px; left: -1px; _bottom: -3px; _left: -1px; background: url('../images/layout/backgrounds/bg-box-grey-corner-bottom-left.gif') top left no-repeat;}
+
+div.content-column .box-grey .corner-top-right {width: 11px; height: 11px; position: absolute; top: -1px; right: -1px; background: url('../images/layout/backgrounds/bg-box-grey-corner-top-right.gif') top left no-repeat;}
+
+div.content-column .box-grey-inner-border {border: 1px solid #FFF;}
+
+div.content-column .box-grey FIELDSET {border: 0px;}
+
+#breadCrumbs {
+/*	clear: both;*/
+	margin: 0;
+}
+#breadCrumbs ul {
+	margin-left: 0px;
+	margin-bottom: 0px;
+}
+#breadCrumbs ul li {
+	display: inline;
+	margin: 0;
+	padding-left: 4px;
+	list-style-type: none;
+        list-style-image: none;
+/*	background: url('../images/layout/crumbs/square-green.gif') no-repeat; */
+	background: none;
+}
+
+
+
+
+
+#box-logout {min-height: 82px; height: auto; _height: 82px; margin-top: 2em;}
+
+#box-logout H3 {width: 120px; height: 20px; margin-top: 1px; margin-left: 1px; color: #006eb3;}
+
+div#user-info {
+	float: right;
+	margin: 0px;
+}
+
+/* dodatecna navigace */
+#nav #nav-logout {width: 62px;}
+#nav #nav-logout SPAN {background-image: url('../images/layout/nav/nav-logout.gif');}
+
+#nav #nav-cms {width: 46px;}
+#nav #nav-cms SPAN {background-image: url('../images/layout/nav/nav-cms.gif');}
+
+#nav #nav-interni {width: 65px;}
+#nav #nav-interni SPAN {background-image: url('../images/layout/nav/nav-interni.gif');}
+
+#nav #nav-moje-data {width: 85px;}
+#nav #nav-moje-data SPAN {background-image: url('../images/layout/nav/nav-moje-data.gif');}
+
+#nav #nav-zakaznici {width: 65px;}
+#nav #nav-zakaznici SPAN {background-image: url('../images/layout/nav/nav-zakaznici.gif');}
+
+
+
+
+#nav #nav-pokus {width: 62px;}
+#nav #nav-pokus SPAN {background-image: url('../images/layout/nav/nav-pokus.gif');}
+
+#nav #nav-hello {width: 75px;}
+#nav #nav-hello SPAN {background-image: url('../images/layout/nav/nav-hello.gif');}
+
+
+
+#content H1 {
+	width: auto; /* v chmu.css je width: 354px - fuj */
+}
+
+.home #left-content-slim {float: left; display: inline; width: 168px;
+ min-height: 100px;
+}
+
+/* WIDE - na dalsim radku uprava kvuli sirce stranky - Petr Novak
+.home #right-content-wide {float: right; display: inline; margin-left: 12px; width: 565px;
+*/
+.home #right-content-wide {float: right; display: inline; margin-left: 12px; width: 765px;
+
+}
+
+div#left-menu ul {
+	font-size: medium;
+	margin: 0px;
+	padding: 0px;
+}
+div#left-menu ul li {
+	margin: 0px;
+	margin-left: -3px;
+	padding: 4px 4px;
+	list-style-type: none;
+	display: list-item;
+	color: white;
+	background-color: #1078b9;
+	border-top: 1px solid #3990c7;
+	font-size: 9px;
+}
+div#left-menu a {
+	color: white;
+	text-decoration: none;
+}
+
+div#left-menu li.active a {
+	font-weight: bold;
+}
+
+.odkaz-obr {
+	clear: right;
+	float: right;
+}
+
+ul.sitemap-list,
+ul.sitemap-list ul
+{
+	margin: 0px 10px 0px 10px;
+	padding: 4px 10px 4px 10px;
+}
+
+ul.sitemap-list {
+	margin-left: 20px;
+	padding-bottom: 20px;
+}
+
+
+/* u weatheru to tak snadno nejde - takze display: none */
+div#weather-box h3.box-title span.txt
+{
+	display: none;
+}
+
+div#weather-box div#weather-content {
+	padding-top: 0px;
+        margin-top: 0px;
+}
+
+div#weather-box1 div#weather-content {
+	padding-top: 0px;
+        margin-top: 0px;
+       margin-left: -5px;
+/*      margin-right: 82px;*/
+}
+
+div#weather-box2 div#weather-content {
+	padding-top: 0px;
+        margin-top: 0px;
+       margin-left: -5px;
+/*      margin-right: 82px;*/
+}
+
+.today,
+.other-days  {
+    margin-top: -25px;
+    _margin-top: -27px; /* MSIE zapocitvava i 2x 1px border */
+}
+
+/* oddelene menu ("5. uroven") */
+ul.detached-menu a.active {
+    font-weight: bold;
+}
+
+ul.detached-menu li {
+   padding-left: 16px !important;
+}
+
+ul.detached-menu li.expanded {
+   background: url("../images/layout/tree/collapsed3angle.png") no-repeat 4px 7px;
+   _background: url("../images/layout/tree/collapsed3angle.png") no-repeat 4px 8px;
+}
+
+ul.detached-menu li.collapsed {
+   background: url("../images/layout/tree/expanded3angle.png") no-repeat 4px 7px ;
+  _background: url("../images/layout/tree/expanded3angle.png") no-repeat 4px 8px ;
+}
+
+ul.detached-menu li.collapsed ul {
+   display: none;
+}
+
+dt {
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+ul.zalozky {
+   display: block;
+   margin-left: 0px;
+   margin-right: auto;
+   text-align: left;
+   border-bottom: 1px solid #bfbfbf;
+/*   width: 100%; */
+   height: 16px;
+   padding: 0;
+   list-style-type: none;
+}
+
+ul.zalozky li {
+	display: inline;
+        float: left;
+	height: 16px;
+	border: 1px solid #bfbfbf;
+	font-weight: bold;
+        margin-left: 10px;
+        overflow: hidden;
+        background: white;
+        position: relative;
+        top: -1px;
+        _top: 1px;
+}
+
+ul.zalozky li.active {
+	border-bottom: 1px solid white !important;
+}
+
+
+/* navigacni-lista - zatim vyuzito jen v AIM ISKO portletu */
+
+div.navigacni-lista {
+/*	clear: both;*/
+	margin: 10px;
+	padding: 4px;
+	border: 1px solid #bfbfbf; 
+}
+.navigacni-lista ul {
+	margin-left: 0px;
+	margin-bottom: 0px;
+}
+
+.navigacni-lista ul li {
+	display: inline;
+	margin: 0;
+	padding-left: 4px;
+	list-style-type: none;
+        list-style-image: none;
+	background-image: none;
+}
+
+
+div#personalizace {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: #fff;
+	border: 4px solid #000;
+	padding: 4px;
+}
+
+
+#nav #nav-4-en {width: 75px;}
+#nav #nav-4-en SPAN {
+    background-image: url('../images/layout/nav/about-as.gif');
+}
+
+#header h1.en span {
+background: url('../images/layout/backgrounds/bg-logo-en.png') top left no-repeat;
+}
+
+#links {
+  left: 380px; /* MSIE nahodne zmatkuje (roztahuje), pokud se dela right: x */
+} 
+
+ul#mnu li#nav-2-en {
+  margin-left: 20px;
+}
+
+#nav-1-en {width: 85px;}
+#nav-1-en SPAN {
+    background-image: url('../images/layout/nav/nav1-en.gif');
+}
+
+#nav-4-en {width: 75px;}
+#nav-4-en SPAN {
+    background-image: url('../images/layout/nav/about-as.gif');
+}
+
+#nav-2-en {width: 99px;}
+#nav-2-en SPAN {
+    background-image: url('../images/layout/nav/nav2-en.gif');
+}
+
+#nav-3-en {width: 136px;}
+#nav-3-en SPAN {
+    background-image: url('../images/layout/nav/nav3-en.gif');
+}
+
+#nav-5-en {width: 66px;}
+#nav-5-en SPAN {
+    background-image: url('../images/layout/nav/nav5-en.gif');
+}
+
+#nav-6-en {width: 85px;}
+#nav-6-en SPAN {
+    background-image: url('../images/layout/nav/nav6-en.gif');
+}
+
+#nav-7-en {width: 85px;}
+#nav-7-en SPAN {
+    background-image: url('../images/layout/nav/nav7-en.gif');
+}
+
+#nav-8-en {width: 85px;}
+#nav-8-en SPAN {
+    background-image: url('../images/layout/nav/nav8-en.gif');
+}
+
+#nav-9-en {width: 118px;}
+#nav-9-en SPAN {
+    background-image: url('../images/layout/nav/nav9-en.gif');
+}
+
+
+#main #bookmark-weather-en {width: 100px; left: -8px; color: #0086B8;}
+#bookmark-weather-en SPAN {background: url('../images/layout/backgrounds/bg-bookmark-pocasi-en.png') top left no-repeat;}
+#bookmark-weather-en A.act SPAN {background-position: 0 -25px;}
+
+#main #bookmark-air-en {width: 100px; left: -8px; color: #58A91E;}
+#bookmark-air-en SPAN {background: url('../images/layout/backgrounds/bg-bookmark-ovzdusi-en.png') top left no-repeat;}
+#bookmark-air-en A.act SPAN {background-position: 0 -25px;}
+
+#main #bookmark-hydrology-en {width: 100px; left: -8px; color: #0C60C1;}
+#bookmark-hydrology-en SPAN {background: url('../images/layout/backgrounds/bg-bookmark-voda-en.png') top left no-repeat;}
+#bookmark-hydrology-en A.act SPAN {background-position: 0 -25px;}
+
+
+/* nova varianta vystrah */
+#warnings div.warnings-text {
+   margin-top: 0;
+   margin-bottom: 0;
+/* WIDE - na dalsim radku uprava kvuli sirce stranky - Petr Novak
+   width: 740px;
+*/
+   width: 940px;
+}
+div.warnings-text .portlet-section-subheader {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.warnings-text dl,
+.warnings-text dd,
+.warnings-text dt {
+   margin-top: 0;
+   margin-bottom: 0;
+   position: relative;
+}
+
+.warnings-text table.alert-table {
+   margin-top: 0;
+   margin-bottom: 0;
+   padding: 0;
+   width: 100%;
+}
+
+.warnings-text h2.idcko {
+  position: absolute;
+  left: 80px;
+  top: 4px;
+  z-index: 1;
+  color: #c31a1a;
+  font-size: 12px;
+}
+
+div#warnings div.warnings-text p.normal {
+   color: #636363;
+}
+
+/* nova varianta partneru */
+div#box-partners-body div.partner-images div {
+   display: block;
+   margin: 0;
+   padding: 0;
+   height: 76px;
+   width: 76px;
+   overflow: hidden;
+/*   border: 1px solid red; */
+   float: left;
+}
+/* MSIE ignoruje line-height: pokud je na radku
+   obrazek (takze pak centruje vuci vysce obrazku...)
+   Stare zlate tabulky ! */
+div#box-partners-body div.partner-images table {
+   margin: 0;
+   padding: 0;
+   height: 76px;
+   width: 76px;
+   vertical-align: middle;
+   text-align: center;
+}
+
+#left-menu h3.box-title span {
+  position: static;
+}
+
+#left-menu h3.box-title {
+   position: static;
+   overflow: visible;
+}
+
+div.wide-list {
+   margin: 10px;
+   /*_width: 100%;  MSIE only */
+   position: relative; /* avoid MSIE Peek-a-boo */
+}
+
+div.wide-list-item {
+   margin-bottom: 10px;
+   background: #edf1f2;
+   padding: 2px;
+   /*_width: 100%;  MSIE only */
+}
+
+div.wide-list-item p {
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+div.wide-list-item p.last {
+  margin-bottom: 0px;
+}
+
+
+div.wide-list-item span.odd-box {
+  float: right;
+}
+
+div.wide-list-item span.odd-box table tr td {
+  vertical-align: top;
+}
+
+div.wide-list-item span.popis {
+ font-weight: bold;
+}
+
+td.big-partner-logo {
+    width: 330px;
+    height: 70px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+td.big-partner-text {
+    text-align: left;
+    vertical-align: middle;
+}
+
+#nav #nav-zakaznici {width: 99px;}
+#nav #nav-zakaznici SPAN {background-image: url('../images/layout/nav/nav-zakaznici.gif');}
+
+/* tabulka v dokumentu o tornadech*/
+#border_table {border-collapse: collapse;} 
+
+#border_table td, .border_table th {
+			padding: 3px 10px;
+			border: 1px solid #cccccc;
+			}
+
+#border_table th 	{background-color: #cccccc;
+			text-align: center;
+			}
+
+div#left-content div.box div.box-body  {border-right: 1px solid #bfbfbf;
+       border-top: 1px solid #bfbfbf;}
+
+
+/* cudlik v barve pocasi */
+#warnings #warnings-numbers A.act SPAN {color: #FFF; background: url('../images/layout/backgrounds/bg-warnings-number-numero-weather.gif') top left repeat-x #0589ba;}
+    /* cudlik v barve hydrologie */
+#warnings #warnings-numbers A.act SPAN.air {color: #FFF; background: url('../images/layout/backgrounds/bg-warnings-number-numero-air.gif') top left repeat-x #58a624;}
+.warnings-text-hidden  {
+	  	 display: none;
+}
+
+/* creative Commons license stuff */
+#cc-disclaimer {
+   padding-left: 20px;
+}
+
+#cc-holder {
+   position: relative;
+   height: 11px;
+   width: 300px; 
+   overflow: visible;
+   float: right;
+   text-align: right;
+   margin: 0 0 0 0;
+   padding:0 12px;
+}
+
+#cc-holder a {
+   position: absolute;
+   top: -20px;	       
+   right: 12px;
+   z-index: 2;
+   margin: 0;
+   padding: 0;
+}
+
+#cc-holder a img {
+   border: 0;
+}
+
+/* ------- Styly pro portlety Telefonniho seznamu  */
+
+.phonelistPortlets #form-container
+{
+background:#ffffff;
+font-family: Verdana, sans-serif; 
+font-size: 10px;
+padding:3px;
+margin:0;
+text-align:left;
+width:945px;
+}
+
+.phonelistPortlets #form
+{
+width:913px;
+border:1px solid #bfbfbf;
+/* background:#edf1f2 url(../gfx/search_form_bg.jpg) repeat-x;*/
+padding:0px 16px;
+}
+
+.phonelistPortlets .search-form-title
+{
+font-size:120%;
+color:#c31a1a;
+font-weight:bold;
+margin-top:18px;
+display:block;
+border-bottom:1px solid #d3d7d7;
+height:23px;
+width:913px;
+}
+
+.phonelistPortlets .form-tabs-container
+{
+width:913px;
+background:red;
+height:35px;
+margin-top:20px;
+background:url(../gfx/form-tabs-container-bg.jpg) repeat-x;
+}
+
+.phonelistPortlets .form-tabs-container ul.form-tabs-list
+{
+list-style-type:none;
+height:35px;
+}
+
+.phonelistPortlets .form-tabs-container ul.form-tabs-list li
+{
+display:inline;
+}
+
+.phonelistPortlets .form-tabs-container ul.form-tabs-list li a
+{
+margin-right:3px;
+background:url(../gfx/inactive-tab-bg.jpg) repeat-x;
+float:left;
+color:#375a71;
+text-align:center;
+padding:0px 8px;
+line-height:33px;
+text-decoration:none;
+font-weight:bold;
+font-size:110%;
+height:35px;
+}
+
+.phonelistPortlets .form-tabs-container ul.form-tabs-list li a.active
+{
+background:url(../gfx/active-tab-bg.jpg) repeat-x;
+}
+
+.phonelistPortlets .form-tabs-container ul.form-tabs-list li a:hover
+{
+background:url(../gfx/active-tab-bg.jpg) repeat-x;
+}
+
+.phonelistPortlets #form form.search
+{
+width:913px;
+margin-bottom:10px;
+}
+
+
+
+.phonelistPortlets #search-form-results
+{
+width:945px;
+}
+
+.phonelistPortlets #search-form-results td.actions
+{
+width:44px;
+}
+
+.phonelistPortlets .search-form-results-title
+{
+margin-top:30px;
+border-bottom:1px solid #d3d7d7;
+height:25px;
+font-size:140%;
+font-weight:bold;
+display:block;
+}
+
+.phonelistPortlets .search-form-results-subtitle
+{
+float:left;
+height:20px;
+font-size:140%;
+font-weight:bold;
+}
+
+.phonelistPortlets .search-form-results-actions
+{
+float:right;
+}
+
+.phonelistPortlets .search-form-results-actions a
+{
+color:#375a71
+}
+
+.phonelistPortlets .search-form-results-submenu
+{
+margin-top:30px;
+float:left;
+height:30px;
+font-weight:bold;
+width:945px;
+}
+
+
+.phonelistPortlets #search-form-results table
+{
+border-collapse:collapse;
+margin-top:20px;
+width:945px;
+}
+
+.phonelistPortlets #search-form-results table th
+{
+color:#006eb3;
+font-size:100%;
+height:34px;
+text-align:left;
+padding-left:4px;
+background:#ffffff;
+}
+
+.phonelistPortlets #search-form-results table tr td
+{
+border-right:1px solid #d9d9d9;
+border-left:1px solid #d9d9d9;
+border:1px solid #ffffff;
+padding-left:4px;
+padding:8px 4px 8px 4px;
+
+}
+
+.phonelistPortlets #search-form-results table tr
+{
+background:#edf1f2;
+}
+
+.phonelistPortlets #search-form-results table tr.odd
+{
+background:#dcdfe4;
+}
+
+.phonelistPortlets #form-container form.edit
+{
+width:913px;
+margin-bottom:20px;
+}
+
+.phonelistPortlets #form-container form p
+{
+width:913px;
+padding:15px 0px;
+}
+
+.phonelistPortlets #form-container form span
+{
+width:350px;
+line-height:22px;
+text-align:right;
+padding-right:10px;
+height:22px;
+display:block;
+float:left;
+}
+
+.phonelistPortlets #form-container form input
+{
+float:left;
+height:20px;
+width:300px;
+border:1px solid #bfbfbf;
+}
+
+.phonelistPortlets #form-container form input.short
+{
+width:90px;
+}
+
+.phonelistPortlets #form-container form input.half
+{
+width:150px;
+}
+
+.phonelistPortlets #form-container form select
+{
+/* Jinak si fontu select nevsima */
+font-family: Verdana, sans-serif; 
+font-size: 10px;
+padding-top: 2px;
+
+float:left;
+padding-left:5px;
+height:22px;
+background:#ffffff;
+width:302px;
+border:1px solid #bfbfbf;
+}
+
+.phonelistPortlets #form-container form textarea
+{
+padding-left:5px;
+height:60px;
+background:#ffffff;
+width:295px;
+border:1px solid #bfbfbf;
+}
+
+.phonelistPortlets #form-container form table.phones
+{
+border-collapse:collapse;
+position: relative;
+left:360px;
+}
+
+.phonelistPortlets #form-container form input.submit-button
+{
+margin-top:10px;
+float:left;
+width:120px;
+margin-left:543px;
+background:#ffffff;
+border:1px solid #bfbfbf;
+font-weight:bold;
+height:25px;
+line-height:25px;
+}
+
+.phonelistPortlets .reset
+{
+clear:both;
+}
+
+/* ----- Konec stylu pro portlety Telefonniho seznamu */
+
+/* ------- Styly pro portlety Telefonniho seznamu  */
+
+.phonelistportlets #form-container
+{
+background:#ffffff;
+font-family: Verdana, sans-serif; 
+font-size: 10px;
+padding:3px 0px;
+margin:0;
+text-align:left;
+width:945px;
+}
+
+.phonelistportlets #form
+{
+width:913px;
+border:1px solid #bfbfbf;
+padding:0px 16px;
+}
+
+.phonelistportlets .search-form-title
+{
+font-size:120%;
+color:#c31a1a;
+font-weight:bold;
+margin-top:18px;
+display:block;
+border-bottom:1px solid #d3d7d7;
+height:23px;
+width:913px;
+}
+
+.phonelistportlets .form-tabs-container
+{
+width:913px;
+background:red;
+height:35px;
+margin-top:20px;
+background:url(../gfx/form-tabs-container-bg.jpg) repeat-x;
+}
+
+.phonelistportlets .form-tabs-container ul.form-tabs-list
+{
+list-style-type:none;
+height:35px;
+}
+
+.phonelistportlets .form-tabs-container ul.form-tabs-list li
+{
+display:inline;
+}
+
+.phonelistportlets .form-tabs-container ul.form-tabs-list li a
+{
+margin-right:3px;
+background:url(../gfx/inactive-tab-bg.jpg) repeat-x;
+float:left;
+color:#375a71;
+text-align:center;
+padding:0px 8px;
+line-height:33px;
+text-decoration:none;
+font-weight:bold;
+font-size:110%;
+height:35px;
+}
+
+.phonelistportlets .form-tabs-container ul.form-tabs-list li a.active
+{
+background:url(../gfx/active-tab-bg.jpg) repeat-x;
+}
+
+.phonelistportlets .form-tabs-container ul.form-tabs-list li a:hover
+{
+background:url(../gfx/active-tab-bg.jpg) repeat-x;
+}
+
+.phonelistportlets #form form.search
+{
+width:913px;
+margin-bottom:10px;
+}
+
+
+
+.phonelistportlets #search-form-results
+{
+width:945px;
+}
+
+.phonelistportlets #search-form-results td.actions
+{
+width:44px;
+}
+
+.phonelistportlets .search-form-results-title
+{
+margin-top:30px;
+border-bottom:1px solid #d3d7d7;
+height:25px;
+font-size:140%;
+font-weight:bold;
+display:block;
+}
+
+.phonelistportlets .search-form-results-subtitle
+{
+float:left;
+height:20px;
+font-size:140%;
+font-weight:bold;
+}
+
+.phonelistportlets .search-form-results-actions
+{
+float:right;
+}
+
+.phonelistportlets .search-form-results-actions a
+{
+color:#375a71
+}
+
+.phonelistportlets .search-form-results-submenu
+{
+margin-top:30px;
+float:left;
+height:30px;
+font-weight:bold;
+width:945px;
+}
+
+
+.phonelistportlets #search-form-results table
+{
+border-collapse:collapse;
+margin-top:20px;
+width:945px;
+}
+
+.phonelistportlets #search-form-results table th
+{
+color:#006eb3;
+font-size:100%;
+height:34px;
+text-align:left;
+padding-left:4px;
+background:#ffffff;
+}
+
+.phonelistportlets #search-form-results table tr td
+{
+border-right:1px solid #d9d9d9;
+border-left:1px solid #d9d9d9;
+border:1px solid #ffffff;
+padding-left:4px;
+padding:8px 4px 8px 4px;
+
+}
+
+.phonelistportlets #search-form-results table tr
+{
+background:#edf1f2;
+}
+
+.phonelistportlets #search-form-results table tr.odd
+{
+background:#dcdfe4;
+}
+
+.phonelistportlets #form-container form.edit
+{
+width:913px;
+margin-bottom:20px;
+}
+
+.phonelistportlets #form-container form p
+{
+width:913px;
+padding:15px 0px;
+}
+
+.phonelistportlets #form-container form span
+{
+width:350px;
+line-height:22px;
+text-align:right;
+padding-right:10px;
+height:22px;
+display:block;
+float:left;
+}
+
+.phonelistportlets #form-container form input
+{
+float:left;
+height:20px;
+width:300px;
+border:1px solid #bfbfbf;
+}
+
+.phonelistportlets #form-container form input.short
+{
+width:90px;
+}
+
+.phonelistportlets #form-container form input.half
+{
+width:150px;
+}
+
+.phonelistportlets #form-container form select
+{
+/* Jinak si fontu select nevsima */
+font-family: Verdana, sans-serif; 
+font-size: 10px;
+padding-top: 2px;
+
+float:left;
+padding-left:5px;
+height:22px;
+background:#ffffff;
+width:302px;
+border:1px solid #bfbfbf;
+}
+
+.phonelistportlets #form-container form textarea
+{
+padding-left:5px;
+height:60px;
+background:#ffffff;
+width:295px;
+border:1px solid #bfbfbf;
+}
+
+.phonelistportlets #form-container form table.phones
+{
+border-collapse:collapse;
+position: relative;
+}
+
+.phonelistportlets #form-container form input.submit-button
+{
+margin-top:10px;
+float:left;
+width:120px;
+margin-left:543px;
+background:#ffffff;
+border:1px solid #bfbfbf;
+font-weight:bold;
+height:25px;
+line-height:25px;
+}
+
+.phonelistportlets .reset
+{
+clear:both;
+}
+
+/* ----- Konec stylu pro portlety Telefonniho seznamu */

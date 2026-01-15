@@ -1,0 +1,1480 @@
+/**
+ * Projekt: ent-common
+ * Copyright (c) ATACO spol. s r.o.
+ * $Revision: 1.1 $
+ */
+ 
+/*
+ * Horizontalni zarovnani na stred
+ */
+#clidata .center {
+    text-align: center;
+}
+
+/*
+ * Horizontalni zarovnani napravo
+ */
+#clidata .right {
+    text-align: right;
+}
+
+/*
+ * Vertikalni zarovnani na horni okraj
+ */
+#clidata .top {
+    vertical-align: top;
+}
+
+/**
+ * Vertikalni zarovnani na stred
+ */
+#clidata .middle {
+    vertical-align: middle;
+}
+
+/**
+ * Vertikalni zarovnani na spodni okraj
+ */
+#clidata .bottom {
+    vertical-align: bottom;
+}
+
+/*
+ * Povoluje zalomeni textu mezi slovy
+ */
+#clidata .wrap {
+    white-space: normal;
+}
+
+/*
+ * Zakazuje zalomeni textu mezi slovy
+ */
+#clidata .nowrap {
+    white-space: nowrap;
+}
+
+/**
+ * Telo stranky aplikace
+ */
+#clidata #ent-page {
+	font-family: sans-serif;
+	font-size: small;
+	font-style: normal;
+	font-weight: normal;
+	
+	color: black;
+	background-color: white;
+}
+
+/**
+ * Sekce hlavicky aplikace
+ */
+#clidata #ent-page-head {
+	color: white;
+	background-color: white;
+	clear:both;
+}
+
+/**
+ * Sekce obsahu aplikace
+ */
+#clidata #ent-page-content {
+	margin-top: 0.5em;
+	clear:both;
+}
+
+/**
+ * Sekce paticky aplikace
+ */
+#clidata #ent-page-foot {
+	margin-top: 1.5em;
+	color: white;
+	background-color: #4A7297;
+	clear:both;
+}
+
+/**
+ * Styl pro tabulku slouzici jako manazer
+ * rozmistovani prvku
+ */
+#clidata table.ent-grid {
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+}
+
+/**
+ * Styl pro tabulku slouzici jako manazer rozmistovani 
+ * prvku, ktera ma zabirat cely volny prostor. 
+ * Rozsiruje vlastnosti table.ent-grid 
+ */
+#clidata table.ent-grid-full-width {
+	width: 100%;
+}
+
+/**
+ * Styl pro radek manazeru rozmistovani prvku
+ */
+#clidata tr.ent-grid-row {
+	margin: 0;
+	padding: 0;	
+}
+
+/**
+ * Styl pro bunku manazeru rozmistovani prvku
+ */
+#clidata td.ent-grid-cell {
+	vertical-align: top;
+	margin: 0;
+	padding: 0;
+	
+	/**
+	 * Pro ladici ucely
+
+	border-width: 1px; 
+	border-style: solid;
+	border-color: silver;
+	 */
+}
+
+/**
+ * Styl pro prvek form.
+ */
+#clidata form {
+	margin: 0;
+	padding: 0;
+	border-style: none;
+	border-width: 0; 
+	clear: both;
+}
+
+/**
+ * Styl pro standartni formular aplikace
+ */
+#clidata div.ent-form, div.ent-sub-form{
+	border-style: solid;
+	border-width: 2px;
+	border-color: #4A7297;
+	background-color: white;
+	color: black;
+	float: left;
+	margin-right: 1em; 
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
+}
+
+#clidata div.ent-sub-form{
+	border-width: 1px;
+}
+
+/**
+ * Styl pro formular aplikace zabirajici plnou sirku
+ * Rozsiruje vlastnosti div.ent-form 
+ */
+#clidata div.ent-form-full-width {
+	float:none;
+}
+
+/**
+ * Styl pro formular aplikace, ktery je posledni v rade 
+ * a neni zadouci odsazeni z prava
+ * Rozsiruje vlastnosti div.ent-form 
+ */
+#clidata div.ent-end-form {
+	margin-right: 0; 
+}
+
+/**
+ * Titulek formulare
+ */
+#clidata div.ent-form-label, div.ent-form-label-small, div.ent-sub-form-label {
+	font-size: 130%;
+	font-weight: bold;
+	font-style: normal;
+	
+	color: white;
+	background-color: #4A7297;
+	
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	
+	clear: both;
+}
+
+/**
+ * Titulek podformulare
+ */
+#clidata div.ent-form-label-small, div.ent-sub-form-label {
+	font-size: 110%;
+}
+
+/**
+ * Telo formulare
+ *	background-color: white; // NENI nastaven - zpusobuje skryvani labelu v IE
+ */
+#clidata div.ent-form-content, div.ent-sub-form-content {
+	font-size: 100%;
+	font-weight: normal;
+	font-style: normal;
+	
+	color: black;
+	
+	border-top-color: #E89830;
+	border-top-style: solid;
+	border-top-width: 2px;
+	
+	margin: 0.2em;
+	padding: 0.5em;
+	clear: both;
+}
+
+#clidata div.ent-sub-form-content {
+	border-top-width: 1px;
+}
+
+/**
+ * Popis pole formulare
+ */
+#clidata label.ent-form-input-label {
+	font-size: 100%;
+	font-weight: bold;
+	font-style: normal;	
+	display: block;
+	margin-right: 1em;
+	
+	color: black;
+}
+
+/**
+ * Styl upravujici chovani popisu pole formulare v div elementu
+ * kde je predpoklad, ze jiz je nastaveno odsazeni od prave strany
+ * viz div.ent-form-content
+ *
+ * Nefunguje v MSIE
+ */
+#clidata div>label.ent-form-input-label {
+	margin-right: 0;
+}
+
+/**
+ * Pole formulare
+ */
+#clidata input.ent-form-input, select.ent-form-input, textarea.ent-form-input {
+	font-size: 100%;
+	font-weight: normal;
+	font-style: normal;	
+	display: block;
+	margin-bottom: 0.5em;
+	
+	border-style: solid;
+	border-color: #4A7297;
+	border-width: 1px; 
+	
+	color: black;
+	background-color: white;
+}
+
+/**
+ * Pole formulare, ktere je pouze pro cteni
+ * Rozsiruje vlastnosti input.ent-form-input
+ */
+#clidata input.ent-form-input-readonly, select.ent-form-input-readonly, textarea.ent-form-input-readonly {
+	border-color: gray;
+	border-width: 1px; 
+}
+
+/**
+ * Pole formulare, ktere je povinne
+ * Rozsiruje vlastnosti input.ent-form-input
+ */
+#clidata input.ent-form-input-required, select.ent-form-input-required, textarea.ent-form-input-required {
+	border-width: 2px; 
+}
+
+/**
+ * Zaskrtavaci pole formulare 
+ */
+#clidata input.ent-form-check-box {
+	position: relative;
+	top: 2px;
+	border-color: #4A7297;
+}
+
+/**
+ * Tlacitko formulare
+ */
+#clidata input.ent-form-button {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-right: 1em;
+	color: white;
+	background-color: #4A7297;
+	
+	border-bottom-color: black;
+	border-right-color: black;
+	border-top-color: gray;
+	border-left-color: gray;
+	border-width: 1px; 
+	height: 1.8em;
+	width: 70px;
+	cursor: pointer; cursor: hand;
+}
+
+/**
+ * Nepristupne tlacitko
+ */
+#clidata input.ent-form-button:disabled {
+	color: black;
+	background-color: silver;
+	cursor: default;
+}
+
+/**
+ * Tlacitko, ktere se pouziva v radku tabulky
+ */
+#clidata input.ent-form-table-button {
+    display: block;
+	margin: 0.2em 0.1em 0.2em 0.1em;
+    padding: 0.1em 0.3em 0.1em 0.3em;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: middle;
+    text-align: center;
+	height: 1.7em;
+	width: 50px;
+}
+
+/**
+ * Tlacitko, ktere se pouziva pro mene vyznamne akce
+ * Rozsiruje vlastnosti input.ent-form-button
+ */
+#clidata input.ent-form-low-action-button {
+	color: black;
+	background-color: white;
+	border: 1px solid #4A7297;
+}
+
+/**
+ * Zvyrazneni tlacitka pri najeti ukazatelem.
+ */
+#clidata input.ent-form-low-action-button:hover, input.ent-form-low-action-button.hover {
+    background-color: #4A7297;
+    color: white;
+    border-bottom-color: black;
+	border-right-color: black;
+	border-top-color: gray;
+	border-left-color: gray;
+}
+
+/**
+ * Nepristupne tlacitko pro mene vyznamne akce nebo v tabulce
+ */
+#clidata input.ent-form-low-action-button:disabled {
+	color: black;
+	background-color: silver;
+	cursor: default;
+}
+
+#clidata td.ent-form-button-cell {
+}
+
+/**
+ * Link ve formulari
+ */
+#clidata a.ent-form-link:active, a.ent-form-link:link, a.ent-form-link:visited, a.ent-form-link:hover {
+	font-size: 100%;
+	font-weight: bold;
+	font-style: normal;	
+	color: #4A7297; 
+	text-decoration: none;
+	cursor: pointer; cursor: hand;
+}
+
+#clidata a.ent-form-link:hover {
+	color: black;
+	cursor: pointer; cursor: hand;
+}
+
+/**
+ * Styl pro kontejner
+	background-color: white; // NENI - zpusobuje skryvani popisku v IE
+ */
+#clidata div.ent-container {
+	color: black;
+	float: left;
+	margin-right: 1em; 
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
+}
+
+#clidata div.ent-bordered-container {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #4A7297;
+	padding: 0.5em;
+	position: relative;
+}
+
+/**
+ * Styl pro kontejner aplikace zabirajici plnou sirku
+ * Rozsiruje vlastnosti div.ent-container
+ */
+#clidata div.ent-container-full-width {
+	float:none;
+}
+
+/**
+ * Styl pro kontejner aplikace, ktery je posledni v rade 
+ * a neni zadouci odsazeni z prava
+ * Rozsiruje vlastnosti div.ent-container 
+ */
+#clidata div.ent-end-container {
+	margin-right: 0; 
+}
+
+/**
+ * Titulek kontejneru
+ * 	background-color: white;  // NENI - zpusobuje skryvani popisku v IE
+ */
+#clidata span.ent-container-label {
+	font-size: 110%;
+	position: relative;
+	top: -1.0em;	
+	margin-left: 0.2em;
+	margin-right: 0.2em;
+	
+	font-weight: normal;
+	font-style: normal;
+	color: #4A7297;
+	background-color: white;
+}
+
+/**
+ * Telo kontejneru
+ */
+#clidata div.ent-container-content {
+	font-size: 100%;
+	font-weight: normal;
+	font-style: normal;
+	
+	color: black;
+	
+	/*
+	margin: 0.2em;
+	padding: 0.5em;
+	*/
+	clear: both;
+}
+
+#clidata .ent-tabbed-pane {
+	margin-right: 1em; 
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
+}
+
+#clidata .ent-tabbed-pane-tab-content {
+	border-width: 1px;
+	border-color: #4A7297;
+}
+
+#clidata .ent-tabbed-pane-active-tab {
+	border-width: 1px;
+	border-color: #4A7297;
+	
+	background-color: #4A7297;
+}
+
+#clidata .ent-tabbed-pane-active-tab-sub {
+	border-width: 1px;
+	border-color: #4A7297;
+}
+
+#clidata .ent-tabbed-pane-inactive-tab {
+	border-width: 1px;
+}
+
+#clidata .ent-tabbed-pane-inactive-tab-sub {
+	border-width: 1px;
+	border-color: #4A7297;
+}
+
+/**
+ * Styl pro tabulku zobrazujici data
+ */
+#clidata table.ent-data-table {
+	border-collapse: collapse; 
+	border-color: #4A7297;
+	border-width: 1px;
+	border-style: solid; 
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+#clidata table.ent-data-table-full-width {
+	width: 100%;
+}
+
+/**
+ * Styl pro hlavicku tabulky
+ */
+#clidata thead.ent-data-table-head {
+}
+
+/**
+ * Styl pro hlavicku tabulky
+ */
+#clidata tr.ent-data-table-head {
+}
+
+/**
+ * Styl pro hlavicku tabulky
+ */
+#clidata th.ent-data-table-head, td.ent-data-table-head {
+	background-color: #4A7297;
+	color: white;
+	font-size: 100%;
+	font-weight: bold;
+	font-style: normal;
+	text-align: left;
+	
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	white-space: nowrap;
+}
+
+/**
+ * Styl pro telo tabulky
+ */
+#clidata tbody.ent-data-table-body {
+	
+}
+
+/**
+ * Styl pro lichy radek tabulky
+ */
+#clidata tr.ent-data-table-odd-row {
+	background-color: #EFEBDE;
+	color: black;
+}
+
+/**
+ * Styl pro lichy radek tabulky
+ */
+#clidata tr.ent-data-table-even-row {
+	background-color: white;
+	color: black;
+}
+
+/**
+ * Styl pro bunky tabulky
+ */
+#clidata td.ent-data-table-td {
+	padding: 0.2em 0.5em 0.2em 0.5em;
+	/*text-align: left;*/
+}
+
+/**
+ * Styl pro paticku tabulky
+ */
+#clidata tfoot.ent-data-table-foot {
+}
+
+/**
+ * Styl pro paticku tabulky
+ */
+#clidata tr.ent-data-table-foot {
+}
+
+/**
+ * Styl pro paticku tabulky
+ */
+#clidata td.ent-data-table-foot {
+	background-color: white;
+	color: black;
+	font-size: 100%;
+	font-weight: bold;
+	font-style: normal;
+	text-align: left;
+	
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	white-space: nowrap;
+	
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: #4A7297;
+}
+
+/**
+ * Zvyrazneni radku tabulky pri najeti ukazatelem.
+ */
+#clidata table.ent-data-table tr:hover td {
+	background-color: #FBE09D;
+}
+
+/**
+ * Zvyrazneni radku tabulky pri najeti ukazatelem.
+ */
+#clidata tr.ent-data-table-even-row:hover, tr.ent-data-table-odd-row:hover, tr.ent-data-table-even-row.hover, tr.ent-data-table-odd-row.hover {
+	background-color: #FBE09D;
+}
+
+#clidata #ent-top-strip {
+	background-color: #EFEBDE; 
+	background-repeat: no-repeat;
+	/*height: 50px;*/
+	text-align: right;
+}
+
+#clidata #ent-top-menu {
+	margin-bottom: 10px;
+	padding-left: 8px;
+	padding-top: 2px;
+	color: black;
+	background-color: #EFEBDE;
+}
+
+#clidata #ent-status-bar {
+	position:relative;
+	top:3px;
+	padding-top:3px;	
+	padding-bottom:3px;	
+	margin-right: 8px;
+	border-top-width:1px; 
+	border-top-color:#4A7297; 
+	border-top-style: solid;
+	color: black;
+	font-size: 100%;
+}
+
+#clidata table.ent-status-bar {
+	border-collapse: collapse; 
+	width: 100%;
+	_width: 95%;
+}
+
+#clidata td.ent-status-bar-app-message {
+	width: 60%;
+}
+
+#clidata td.ent-status-bar-login-info {
+	width: 20%;
+	white-space: nowrap;
+}
+
+#clidata td.ent-status-bar-time-info {
+	width: 20%;
+	white-space: nowrap;
+}
+
+#clidata div.ent-status-error-messages {
+	width: 100%;
+	margin:0;
+}
+
+/*
+ * Informacni zprava
+ */
+#clidata .ent-message-info {
+	color: black;
+	font-weight: normal;
+}
+
+/*
+ * Zprava typu varovani
+ */
+#clidata .ent-message-warning {
+	color: #4A7297;
+	font-weight: bold;
+}
+
+/*
+ * Chybova zprava
+ */
+#clidata .ent-message-error {
+	color: red;
+	font-weight: bold;
+}
+
+/*
+ * Horizontalni zarovnani nalevo
+ */
+#clidata .left {
+    text-align: left;
+}
+
+/*
+ * Horizontalni zarovnani na stred
+ */
+#clidata .center {
+    text-align: center;
+}
+
+/*
+ * Horizontalni zarovnani napravo
+ */
+#clidata .right {
+    text-align: right;
+}
+
+/*
+ * Vertikalni zarovnani na horni okraj
+ */
+#clidata .top {
+    vertical-align: top;
+}
+
+/**
+ * Vertikalni zarovnani na stred
+ */
+#clidata .middle {
+    vertical-align: middle;
+}
+
+/**
+ * Vertikalni zarovnani na spodni okraj
+ */
+#clidata .bottom {
+    vertical-align: bottom;
+}
+
+/*
+ * Povoluje zalomeni textu mezi slovy
+ */
+#clidata .wrap {
+    white-space: normal;
+}
+
+/*
+ * Zakazuje zalomeni textu mezi slovy
+ */
+#clidata .nowrap {
+    white-space: nowrap;
+}
+
+/**
+ * Styl s definicemi barev pouzitych v ent-2.0.css.
+ * koncovky jednotlivych barev znamenaji pouzitelnost
+ * jako:
+ * -fg: barva popredi
+ * -bg: barva pozadi
+ * -bc: barva ramecku
+ */
+ 
+/**
+ * Barva popredi stranky
+ */
+#clidata .ent-page-fg-fg {
+	color: black;
+}
+#clidata .ent-page-fg-bg {
+	background-color: black;
+}
+#clidata .ent-page-fg-bc {
+	border-color: black;
+}
+
+/**
+ * Barva pozadi stranky
+ */
+#clidata .ent-page-bg-fg {
+	color: white;
+}
+#clidata .ent-page-bg-bg {
+	background-color: white;
+}
+#clidata .ent-page-bg-bc {
+	border-color: white;
+}
+
+/**
+ * Barva popredi hlavicky stranky
+ */
+#clidata .ent-page-head-fg-fg {
+	color: white;
+}
+#clidata .ent-page-head-fg-bg {
+	background-color: white;
+}
+#clidata .ent-page-head-fg-bc {
+	border-color: white;
+}
+
+/**
+ * Barva pozadi hlavicky stranky
+ */
+#clidata .ent-page-head-bg-fg {
+	color: white;
+}
+#clidata .ent-page-head-bg-bg {
+	background-color: white;
+}
+#clidata .ent-page-head-bg-bc {
+	border-color: white;
+}
+
+/**
+ * Barva popredi obsahu stranky
+ */
+#clidata .ent-page-content-fg-fg {
+	color: black;
+}
+#clidata .ent-page-content-fg-bg {
+	background-color: black;
+}
+#clidata .ent-page-content-fg-bc {
+	border-color: black;
+}
+
+/**
+ * Barva pozadi obsahu stranky
+ */
+#clidata .ent-page-content-bg-fg {
+	color: white;
+}
+#clidata .ent-page-content-bg-bg {
+	background-color: white;
+}
+#clidata .ent-page-content-bg-bc {
+	border-color: white;
+}
+
+/**
+ * Barva popredi paticky stranky
+ */
+#clidata .ent-page-foot-fg-fg {
+	color: white;
+}
+#clidata .ent-page-foot-fg-bg {
+	background-color: white;
+}
+#clidata .ent-page-foot-fg-bc {
+	border-color: white;
+}
+
+/**
+ * Barva pozadi paticky stranky
+ */
+#clidata .ent-page-foot-bg-fg {
+	color: #4A7297;
+}
+#clidata .ent-page-foot-bg-bg {
+	background-color: #4A7297;
+}
+#clidata .ent-page-foot-bg-bc {
+	border-color: #4A7297;
+}
+
+/**
+ * Barva popredi stavoveho radku
+ */
+#clidata .ent-status-bar-fg-fg {
+	color: black;
+}
+#clidata .ent-status-bar-fg-bg {
+	background-color: black;
+}
+#clidata .ent-status-bar-fg-bc {
+	border-color: black;
+}
+
+/**
+ * Barva pozadi stavoveho radku
+ */
+#clidata .ent-status-bar-bg-fg {
+	color: #EFEBDE;
+}
+#clidata .ent-status-bar-bg-bg {
+	background-color: #EFEBDE;
+}
+#clidata .ent-status-bar-bg-bc {
+	border-color: #EFEBDE;
+}
+
+/**
+ * Barva ramecku stavoveho radku
+ */
+#clidata .ent-status-bar-bc-top-fg {
+	color: #4A7297;
+}
+#clidata .ent-status-bar-bc-top-bg {
+	background-color: #4A7297;
+}
+#clidata .ent-status-bar-bc-top-bc {
+	border-color: #4A7297;
+}
+
+/**
+ * Barva popredi hlavniho menu
+ */
+#clidata .ent-top-menu-fg-fg {
+	color: black;
+}
+#clidata .ent-top-menu-fg-bg {
+	background-color: black;
+}
+#clidata .ent-top-menu-fg-bc {
+	border-color: black;
+}
+
+/**
+ * Barva pozadi hlavniho menu 
+ */
+#clidata .ent-top-menu-bg-fg {
+	color: #EFEBDE;
+}
+#clidata .ent-top-menu-bg-bg {
+	background-color: #EFEBDE;
+}
+#clidata .ent-top-menu-bg-bc {
+	border-color: #EFEBDE;
+}
+
+/**
+ * Barva pozadi stripu
+ */
+#clidata .ent-top-strip-bg-fg {
+	color: #EFEBDE;
+}
+#clidata .ent-top-strip-bg-bg {
+	background-color: #EFEBDE;
+}
+#clidata .ent-top-strip-bg-bc {
+	border-color: #EFEBDE;
+}
+
+/**
+ * Barva popredi formulare
+ */
+#clidata .ent-form-fg-fg {
+	color: black;
+}
+#clidata .ent-form-fg-bg {
+	background-color: black;
+}
+#clidata .ent-form-fg-bc {
+	border-color: black;
+}
+
+/**
+ * Barva pozadi formulare
+ */
+#clidata .ent-form-bg-fg {
+	color: white;
+}
+#clidata .ent-form-bg-bg {
+	background-color: white;
+}
+#clidata .ent-form-bg-bc {
+	border-color: white;
+}
+
+/**
+ * Barva ramecku formulare
+ */
+#clidata .ent-form-bc-fg {
+	color: #4A7297;
+}
+#clidata .ent-form-bc-bg {
+	background-color: #4A7297;
+}
+#clidata .ent-form-bc-bc {
+	border-color: #4A7297;
+}
+
+/**
+ * Barva popredi titulku formulare
+ */
+#clidata .ent-form-label-fg-fg {
+	color: white;
+}
+#clidata .ent-form-label-fg-bg {
+	background-color: white;
+}
+#clidata .ent-form-label-fg-bc {
+	border-color: white;
+}
+
+/**
+ * Barva pozadi titulku formulare
+ */
+#clidata .ent-form-label-bg-fg {
+	color: #4A7297;
+}
+#clidata .ent-form-label-bg-bg {
+	background-color: #4A7297;
+}
+#clidata .ent-form-label-bg-bc {
+	border-color: #4A7297;
+}
+
+/**
+ * Barva popredi obsahu formulare
+ */
+#clidata .ent-form-content-fg-fg {
+	color: black;
+}
+#clidata .ent-form-content-fg-bg {
+	background-color: black;
+}
+#clidata .ent-form-content-fg-bc {
+	border-color: black;
+}
+
+/**
+ * Barva pozadi obsahu formulare
+ */
+#clidata .ent-form-content-bg-fg {
+	color: white;
+}
+#clidata .ent-form-content-bg-bg {
+	background-color: white;
+}
+#clidata .ent-form-content-bg-bc {
+	border-color: white;
+}
+
+/**
+ * Barva ramecku obsahu formulare
+ */
+#clidata .ent-form-content-bc-top-fg {
+	color: #E89830;
+}
+#clidata .ent-form-content-bc-top-bg {
+	background-color: #E89830;
+}
+#clidata .ent-form-content-bc-top-bc {
+	border-color: #E89830;
+}
+
+/**
+ * Barva popredi popisku pole
+ */
+#clidata .ent-form-input-label-fg-fg {
+	color: black;
+}
+#clidata .ent-form-input-label-fg-bg {
+	background-color: black;
+}
+#clidata .ent-form-input-label-fg-bc {
+	border-color: black;
+}
+
+/**
+ * Barva popredi pole formulare
+ */
+#clidata .ent-form-input-fg-fg {
+	color: black;
+}
+#clidata .ent-form-input-fg-bg {
+	background-color: black;
+}
+#clidata .ent-form-input-fg-bc {
+	border-color: black;
+}
+
+/**
+ * Barva pozadi pole formulare
+ */
+#clidata .ent-form-input-bg-fg {
+	color: white;
+}
+#clidata .ent-form-input-bg-bg {
+	background-color: white;
+}
+#clidata .ent-form-input-bg-bc {
+	border-color: white;
+}
+
+/**
+ * Barva ramecku pole formulare
+ */
+#clidata .ent-form-input-bc-fg {
+	color: #4A7297;
+}
+#clidata .ent-form-input-bc-bg {
+	background-color: #4A7297;
+}
+#clidata .ent-form-input-bc-bc {
+	border-color: #4A7297;
+}
+
+/**
+ * Barva popredi tlacitka
+ */
+#clidata .ent-form-button-fg-fg {
+	color: white;
+}
+#clidata .ent-form-button-fg-bg {
+	background-color: white;
+}
+#clidata .ent-form-button-fg-bc {
+	border-color: white;
+}
+
+/**
+ * Barva pozadi tlacitka
+ */
+#clidata .ent-form-button-bg-fg {
+	color: #4A7297;
+}
+#clidata .ent-form-button-bg-bg {
+	background-color: #4A7297;
+}
+#clidata .ent-form-button-bg-bc {
+	border-color: #4A7297;
+}
+
+/**
+ * Barva popredi linku
+ */
+#clidata .ent-form-link-fg-fg {
+	color: #4A7297;
+}
+#clidata .ent-form-link-fg-bg {
+	background-color: #4A7297;
+}
+#clidata .ent-form-link-fg-bc {
+	border-color: #4A7297;
+}
+
+/**
+ * Barva popredi linku (:HOVER)
+ */
+#clidata .ent-form-link-hover-fg-fg {
+	color: black;
+}
+#clidata .ent-form-link-hover-fg-bg {
+	background-color: black;
+}
+#clidata .ent-form-link-hover-fg-bc {
+	border-color: black;
+}
+
+/**
+ * Barva ramecku tabulky dat
+ */
+#clidata .ent-data-table-bc-fg {
+	color: #4A7297;
+}
+#clidata .ent-data-table-bc-bg {
+	background-color: #4A7297;
+}
+#clidata .ent-data-table-bc-bc {
+	border-color: #4A7297;
+}
+
+/**
+ * Barva popredi hlavicky tabulky
+ */
+#clidata .ent-data-table-head-fg-fg {
+	color: white;
+}
+#clidata .ent-data-table-head-fg-bg {
+	background-color: white;
+}
+#clidata .ent-data-table-head-fg-bc {
+	border-color: white;
+}
+
+/**
+ * Barva pozadi hlavicky tabulky
+ */
+#clidata .ent-data-table-head-bg-fg {
+	color: #4A7297;
+}
+#clidata .ent-data-table-head-bg-bg {
+	background-color: #4A7297;
+}
+#clidata .ent-data-table-head-bg-bc {
+	border-color: #4A7297;
+}
+
+/**
+ * Barva popredi licheho radku tabulky
+ */
+#clidata .ent-data-table-odd-row-fg-fg {
+	color: black;
+}
+#clidata .ent-data-table-odd-row-fg-bg {
+	background-color: black;
+}
+#clidata .ent-data-table-odd-row-fg-bc {
+	border-color: black;
+}
+
+/**
+ * Barva pozadi licheho radku tabulky
+ */
+#clidata .ent-data-table-odd-row-bg-fg {
+	color: #EFEBDE;
+}
+#clidata .ent-data-table-odd-row-bg-bg {
+	background-color: #EFEBDE;
+}
+#clidata .ent-data-table-odd-row-bg-bc {
+	border-color: #EFEBDE;
+}
+
+/**
+ * Barva popredi sudeho radku tabulky
+ */
+#clidata .ent-data-table-even-row-fg-fg {
+	color: black;
+}
+#clidata .ent-data-table-even-row-fg-bg {
+	background-color: black;
+}
+#clidata .ent-data-table-even-row-fg-bc {
+	border-color: black;
+}
+
+/**
+ * Barva pozadi sudeho radku tabulky
+ */
+#clidata .ent-data-table-even-row-bg-fg {
+	color: white;
+}
+#clidata .ent-data-table-even-row-bg-bg {
+	background-color: white;
+}
+#clidata .ent-data-table-even-row-bg-bc {
+	border-color: white;
+}
+
+/**
+ * Barva popredi paticky tabulky
+ */
+#clidata .ent-data-table-foot-fg-fg {
+	color: black;
+}
+#clidata .ent-data-table-foot-fg-bg {
+	background-color: black;
+}
+#clidata .ent-data-table-foot-fg-bc {
+	border-color: black;
+}
+
+/**
+ * Barva pozadi paticky tabulky
+ */
+#clidata .ent-data-table-foot-bg-fg {
+	color: white;
+}
+#clidata .ent-data-table-foot-bg-bg {
+	background-color: white;
+}
+#clidata .ent-data-table-foot-bg-bc {
+	border-color: white;
+}
+
+/**
+ * Barva ramecku paticky tabulky
+ */
+#clidata .ent-data-table-foot-bc-top-fg {
+	color: #4A7297;
+}
+#clidata .ent-data-table-foot-bc-top-bg {
+	background-color: #4A7297;
+}
+#clidata .ent-data-table-foot-bc-top-bc {
+	border-color: #4A7297;
+}
+
+/** 
+ * Styl pro tabulku v napovede
+ */
+#clidata table.ent-help-table {
+	border-style: solid;
+	border-width: 2px;
+	border-color: black;
+	border-collapse: collapse;
+	background-color: white;
+	color: black;
+}
+
+/** 
+ * Styl pro zahlavi tabulky v napovede
+ */
+#clidata th.ent-help-table-head {
+	background-color: #EFEBDE;
+	font-weight: bold;
+	border-bottom: solid;
+	border-color: black;
+	border-width: 1px;
+	color: black;
+}
+
+/** 
+ * Styl pro radek tabulky v napovede
+ */
+#clidata tr.ent-help-table-row {
+	border-bottom-style: dashed;
+	border-color: black;
+	border-width: 1px;
+	background-color: white;
+	color: black;
+}
+
+/** 
+ * Styl pro bunku tabulky v napovede
+ * Obsahuje HACK pro IE
+ */
+#clidata td.ent-help-table-data {
+	padding-left: 0.5em;
+	padding-right: 2em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	background-color: white;
+	_border-bottom-style: dotted;
+	_border-color: black;
+	_border-width: 1px;
+	color: black;
+}
+
+/** 
+ * Styl pro nadpis v napovede
+ */
+#clidata h4.ent-help-sub-label {
+	font-weight: bold;
+	size: 80%;
+	background-color: white;
+	color: black;
+}
+
+/** 
+ * Styl pro tucne pismo v napovede
+ */
+#clidata td.bold,th.bold,h4.bold, span.bold {
+	font-weight: bold;
+}
+
+/** 
+ * Styl pro pismo kurzivou v napovede
+ */
+#clidata td.italic, span.italic {
+	font-style: italic;
+}
+
+/** 
+ * Styl pro kod v napovede
+ */
+#clidata td.code, p.code, span.code {
+	font-family: monospace;
+}
+
+/** 
+ * Styl pro nekodovy text v napovede
+ */
+#clidata td.nocode, p.nocode, span.nocode {
+	font-family: sans-serif;
+}
+
+/**
+ * Wrapovaci komponenta stromu
+ */
+#clidata div.ent-composite-tree {
+	overflow:auto; 
+	padding-top: 0.5em;
+	padding-left: 0.5em;
+	padding-right: 0.5em; 
+	padding-bottom:0.5em;
+	position:relative;
+	top: 0.5em; 
+	left:0;
+	right:0; 
+	border-style: solid none none none; 
+	border-top-width: 1px;
+}
+
+/**
+ * Vzhled tlacitka (ovladaci prvek, navigacni link)
+ */
+#clidata .ent-composite-button, .ent-composite-page-link a {
+	border: 1px solid silver;
+    padding: 0.1em 0.2em;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: middle;
+    background-color: white;
+    color: black;
+}
+
+/**
+ * Zvyrazneni linku ve skladane komponente
+ */
+#clidata .ent-composite-button:hover, .ent-composite-button.hover {
+	color: white;
+	background-color: #4A7297; 
+	text-decoration: none;
+	cursor: pointer; cursor: hand;
+}
+
+/**
+ * Vzhled tlacitka - aktualni stranka (navigacni link)
+ */
+#clidata .ent-composite-page-link-active a {
+	border: 1px solid silver;
+    padding: 0.1em 0.2em;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: middle;
+    background-color: white;
+	font-weight: bold;
+	color: black;
+	background-color: #FBE09D;
+	text-decoration: none;
+}
+/**
+ * Link ve skladane komponente (strom)
+ */
+#clidata .ent-composite-link {
+	font-weight: normal;
+	color: black;
+	text-decoration: none;
+}
+
+/**
+ * Zvyrazneni linku ve skladane komponente (strom)
+ */
+#clidata .ent-composite-link:hover {
+	color: black;
+	background-color: #FBE09D; 
+	text-decoration: none;
+	cursor: pointer; cursor: hand;
+}
+
+/**
+ * Aktualniho link ve skladane komponente (aktualni uzel stromu)
+ */
+#clidata .ent-composite-link-active {
+	font-weight: bold;
+	color: black;
+	background-color: #FBE09D;
+	text-decoration: none;
+}
+
+/**
+ * Zvyrazneni aktualniho linku ve skladane komponente (aktualni uzel stromu, link aktualni stranky)
+ */
+#clidata .ent-composite-link-active:hover, .ent-composite-link-active.hover, .ent-composite-page-link-active a:hover {
+	color: white;
+	background-color: #4A7297; 
+	text-decoration: none;
+	cursor: default;
+}
+
+/**
+ * Zvyrazneni ovladaciho prvku ve skladane komponente (linky na stranky)
+ */
+#clidata .ent-composite-page-link a:hover {
+	color: white;
+	background-color: #4A7297; 
+	text-decoration: none;
+	cursor: pointer; cursor: hand;
+}
+

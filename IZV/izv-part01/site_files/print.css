@@ -1,0 +1,26 @@
+/* stylovani tisku - spolecne pro cely CHMU portal */
+
+* {
+  color: black;
+  background: white;
+  background-image: none;
+}
+
+div#header-holder  #header #links,
+div#header-holder  #header #banners,
+div#header-holder  #header #nav,
+div#content-holder #content #user-info,
+div#content-holder #content .box-buttons,
+div#content-holder #content #left-menu,
+div#footer-holder #footer #secondary-menu,
+hr.hidden  {
+  display: none;
+}
+
+#breadCrumbs ul {
+   list-style: none inherit none;
+}
+#breadCrumbs ul li {
+   display: inline;
+}
+

@@ -1,0 +1,52 @@
+/* ----------------------------------------------------------------------------------------------------------
+
+    Výstupní zařízení: screen, projection
+
+    Autor:          Nuvio (www.nuvio.cz)
+    Verze:          2.2.6 (2008-07-13, 14:28 GMT+1)
+
+    Struktura:
+        display; position; z-index; float; clear; width; height; overflow; margin; padding; border; background; align; font;
+
+    Obsah:
+
+        1) Reset
+        2) Univerzální formátovací styly
+
+---------------------------------------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------------------------------------
+1) Reset
+---------------------------------------------------------------------------------------------------------- */
+
+#prouzek_main * {margin:0; padding:0;}
+
+/* ----------------------------------------------------------------------------------------------------------
+2) Univerzální formátovací styly
+---------------------------------------------------------------------------------------------------------- */
+
+#prouzek_main .noscreen {display:none;}
+
+#prouzek_main .prouzek_box {min-height:1px;}
+#prouzek_main .prouzek_box:after {display:block; visibility:hidden; clear:both; line-height:0; font-size:0; content:".";}
+
+#prouzek_main .fix {float:none; clear:both; width:0; height:0; margin:0; padding:0; border:0; line-height:0; font-size:0;}
+
+#prouzek_main .f-left {float:left !important;}
+#prouzek_main .f-right {float:right !important;}
+
+#prouzek_main .t-left {text-align:left !important;}
+#prouzek_main .t-center {text-align:center !important;}
+#prouzek_main .t-right {text-align:right !important;}
+#prouzek_main .t-justify {text-align:justify !important;}
+
+#prouzek_main .va-top {vertical-align:top !important;}
+#prouzek_main .va-middle {vertical-align:middle !important;}
+#prouzek_main .va-bottom {vertical-align:bottom !important;}
+
+#prouzek_main .nom {margin:0 !important;}
+#prouzek_main .nomt {margin-top:0 !important;}
+#prouzek_main .nomb {margin-bottom:0 !important;}
+
+#prouzek_main .hidden {position:absolute; left:-1000em; top:-1000em; width:1px; height:1px; overflow:hidden;}
+

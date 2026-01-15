@@ -1,0 +1,56 @@
+
+.alert-color { color: #c00 }
+.warn-color { color: #ff6600 }
+.copyright-text { color: #999; font-size: 11px; line-height: 150% }
+.dark-line-color { background-color: #000 }
+.default-text { font-size: 12px; font-family: Verdana, Geneva, Arial, Helvetica, Swiss, SunSans-Regular }
+.form-label-text { font-weight: bold; font-size: 12px }
+.light-line-color { background-color: #ccc }
+.light-text-color { color: #666 }
+.message-bg-color { background-color: #ffffe0 }
+.site-user-role-text { font-size: 11px; font-family: Verdana, Geneva, Arial, Helvetica, Swiss, SunSans-Regular }
+.small-text { font-size: 11px; font-family: Verdana, Geneva, Arial, Helvetica, Swiss, SunSans-Regular }
+.subtitle-text { font-weight: bold; font-size: 12px }
+.table-header-small-text { font-size: 11px }
+.table-header-text { font-size: 12px }
+/*body { font-size: 13px; font-family: Verdana, Geneva, Arial, Helvetica, Swiss, SunSans-Regular; background-color: #fff; }*/
+/*td { font-size: 11px; font-family: Verdana, Geneva, Arial, Helvetica, Swiss, SunSans-Regular }*/
+
+.tile-border {background-color : #666699 }
+.tile-solid {background-color : #666699 ;	border-left:1px solid #9999cc;
+	border-right:1px solid #333366;
+	border-bottom:1px solid #333366;
+	border-top : 1px solid #9999cc}
+.tile-a { background-color : #666699 ;	border-left:1px solid #9999cc;
+	border-bottom:1px solid #333366;
+	}	
+.tile-b { background-color : #666699 ;
+	border-bottom:1px solid #333366;
+	font-family : Verdana,geneva;
+	color : #FFFFFF;
+	font-weight : bold;
+	font-size : 12px;
+	}	
+.tile-c { background-color : #666699 ;
+	border-right:1px solid #333366;
+	border-bottom:1px solid #333366;
+	}
+.tile-highlight {background-color : #9999cc }
+.inset {margin-top : 4px; margin-bottom : 4px; font-family : Verdana,geneva; font-size: 11px;}
+.small-text-inset {margin-top : 4px; margin-bottom : 4px; font-family : Verdana,geneva; font-size: 11px;}
+.new-table-title {margin-top : 3px; margin-bottom : 3px; font-family : Verdana,geneva; 	color : #FFFFFF;
+	font-weight : bold;
+	font-size : 11px; text-decoration: none;
+}
+.tile-row-highlight { background-color : #f0f0ff }
+.tile-row-normal { background-color : #ffffff }
+.tile-dark {background-color : #333366 ; background : #333366}
+.tile-rule {background-color : #d0d0d0 }
+.fatwire-box {background-color : #FFffff ; border-style : solid ; border-color : #33FF33 ; border-width : 1px;
+margin : 0px; padding : 0px}
+
+.form-inset { margin-top : 4px; margin-bottom : 8px; margin-right : 8px; margin-left : 4px;}
+.form-label-inset {margin-top : 4px; margin-bottom : 8px; margin-right : 8px; margin-left : 4px; font-weight: bold; font-size: 12px}
+.form-shade { background-color : #f0f0ff }
+.disabled-text { color : #666; }
+

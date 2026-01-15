@@ -1,0 +1,40 @@
+#weather-content .airqual {
+        display: inline; float: left; width: 83px
+}
+
+#weather-content .airqual div {
+        border-top: #bfbfbf 1px solid; 
+        min-height: 80px; 
+        background: url(../../images/layout/backgrounds/bg-weather-other-day.gif) no-repeat left top; 
+        height: auto; 
+        text-align: left;
+}
+
+#weather-content .airqual div.airqual-legend {
+        border-top-width: 0px
+}
+
+#weather-content .airqual div h4 {
+        margin-top: 0px; margin-left: 0px; padding-top: 0.5em
+}
+
+#weather-content .airqual div p.legend-text { 
+        font-weight: lighter;
+        font-size: 10px;
+        color: #000; 
+        margin-top: 0; 
+        margin-bottom: 0.6em;
+        text-align: left
+}
+
+#weather-content .airqual div p.note-text { 
+        font-weight: lighter;
+        font-size: 10px; 
+        color: #000; 
+        margin-top: 0; 
+        text-align: left
+}
+
+.airqual-legend {
+        margin-top: -25px; _margin-top: -27px
+}

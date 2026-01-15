@@ -1,0 +1,25 @@
+[project]
+name = "izv-part02"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "lxml>=6.0.2",
+    "matplotlib>=3.10.7",
+    "pandas>=2.3.3",
+    "pathlib>=1.0.1",
+    "seaborn>=0.13.2",
+]
+
+[tool.ruff]
+line-length = 120
+select = ["E", "W", "F", "I" ,"D"]
+ignore = ["E501"]  # ignore long lines if needed
+fix = true
+unsafe-fixes = true
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true

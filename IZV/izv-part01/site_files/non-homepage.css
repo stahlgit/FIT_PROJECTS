@@ -1,0 +1,12 @@
+/* upravy stylu (orezani banneru) pro jinou stranku nez homepage */
+
+#banners {
+   height: 32px;
+   overflow: hidden;
+}
+
+#header-holder {
+  height: 183px;
+}
+
+

@@ -1,0 +1,27 @@
+[project]
+name = "izv-part01"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "beautifulsoup4>=4.14.2",
+    "matplotlib>=3.10.7",
+    "numpy>=2.3.3",
+    "pytest>=8.4.2",
+    "requests>=2.32.5",
+    "ruff>=0.14.0",
+    "ruff-lsp>=0.0.62",
+]
+
+[tool.ruff]
+line-length = 88
+select = ["E", "W", "F", "I" ,"D"]
+ignore = ["E501"]  # ignore long lines if needed
+fix = true
+unsafe-fixes = true
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true

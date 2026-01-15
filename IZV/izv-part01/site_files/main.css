@@ -1,0 +1,103 @@
+/* ----------------------------------------------------------------------------------------------------------
+
+    Výstupní zařízení: screen, projection
+
+    Autor:          Nuvio (www.nuvio.cz)
+    Aktualizace:    2008-01-01, 00:00 GMT+1
+    Verze:          2.2.6 (2008-07-13, 14:28 GMT+1)
+
+    Struktura:
+        display; position; z-index; float; clear; width; height; overflow; margin; padding; border; background; align; font;
+
+    Obsah:
+    
+        1) HTML tagy
+        2) HTML styly
+        3) Layout
+        4-1) Stránka:
+        5) Nezařaditelné
+
+---------------------------------------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------------------------------------
+1) HTML tagy
+---------------------------------------------------------------------------------------------------------- */
+
+#prouzek_main a {color:#00F;}
+#prouzek_main a:hover {color:#F00;}
+
+#prouzek_main h1, #prouzek_main h2, #prouzek_main h3, #prouzek_main h4, #prouzek_main h5, #prouzek_main h6, #prouzek_main p, #prouzek_main address, #prouzek_main blockquote, #prouzek_main table, #prouzek_main dl, #prouzek_main fieldset {margin:15px 0;}
+
+/* ----------------------------------------------------------------------------------------------------------
+2) HTML styly
+---------------------------------------------------------------------------------------------------------- */
+
+#prouzek_main table.table-01 {border-collapse:collapse; border-spacing:0; border:1px solid #CCC;}
+#prouzek_main table.table-01 th {background:#EEE;}
+#prouzek_main table.table-01 th, #prouzek_main table.table-01 td {border:1px solid #DDD;}
+#prouzek_main table.table-01 tr.bg td {background:#F5F5F5;}
+
+#prouzek_main ul.ul-01 {list-style:none;}
+#prouzek_main ul.ul-01 ul {margin:0;}
+
+#prouzek_main dl.dl-01 dt {font-weight:bold;}
+#prouzek_main dl.dl-01 dd {margin-left:20px;}
+
+
+/* ----------------------------------------------------------------------------------------------------------
+3) Layout
+---------------------------------------------------------------------------------------------------------- */
+
+#prouzek_main {display:block; overflow: hidden; text-align:left; width:100%;}
+
+#prouzek_main     	#content {overflow:hidden;}
+#prouzek_main     	#aside {overflow:hidden;}
+#prouzek_main 	#footer {clear:both;}
+
+/* ----------------------------------------------------------------------------------------------------------
+0) Hlavička webu resortu životního prostředí
+---------------------------------------------------------------------------------------------------------- */
+
+/*header layout*/
+#prouzek_header, #rozbaleno {display: block; width: 1003px; text-align:left; margin-left:auto; margin-right:auto; }
+#rozbaleno {position:absolute; z-index:1000;background:#93B632 url("../images/prouzek/bg_y.gif") repeat-y center top;}
+  #rozbaleno_x {display:block; float:right; margin-right:0px; margin-bottom:0; margin-top:0; width:1003px; height:28px;background:#93B632 url("../images/prouzek/bg_rozbaleno.gif") no-repeat center bottom; z-index:1000;}
+#prouzek_header a {color:#000; text-decoration:none;}
+  #prouzek_header a:hover {text-decoration:underline;}
+#rozbaleno a {color:#fff; text-decoration:underline;}
+  #rozbaleno a:hover {text-decoration:none;}
+  
+  /*zakladni vizualni styl*/
+  #prouzek_sekce {display: block; width: 100%; background:#93B632;}
+  #prouzek_header div.sekce-obal {padding-top:0px; padding-bottom:10px; padding-left:16px; padding-right:16px;}
+  #prouzek_header div.sekce-polovina {display:block; float:left; width:50%;}
+  .zavreny {background:#93B632 url("../images/prouzek/bg.gif") no-repeat center bottom;}
+  .otevreny {background:#93B632 url("../images/prouzek/bg_y.gif") repeat-y center top;}
+	/*logo resort*/
+        #prouzek_header h1 {position:relative; width:141px; height:19px; overflow:hidden; margin:0; padding:0; font-size:90%;}
+        #prouzek_header h1 span {display:block; position:absolute; top:0; left:0; z-index:1; width:100%; height:100%; margin:0; padding:0; background:url("../images/prouzek/logo.gif") 0 0 no-repeat; cursor:pointer;}
+
+  #sekce-rolovat.zavreno {background:url("../images/prouzek/show.gif") no-repeat right center; padding-right:22px;}
+  #sekce-rolovat.otevreno {background:url("../images/prouzek/hide.gif") no-repeat right center; padding-right:22px;}
+  #sekce-odrolovat.zavreno {background:url("../images/prouzek/show.gif") no-repeat right center; padding-right:22px;}
+  #sekce-odrolovat.otevreno {background:url("../images/prouzek/hide.gif") no-repeat right center; padding-right:22px;}
+
+	/*logo MZP*/
+        #rozbaleno h2 {position:relative; width:157px; height:40px; overflow:hidden; margin:0; padding:0; font-size:90%;}
+        #rozbaleno h2 span {display:block; position:absolute; top:0; left:0; z-index:1; width:100%; height:100%; margin:0; padding:0; background:url("../images/prouzek/logo_main.gif") 0 0 no-repeat; cursor:pointer;}
+
+  #rozbaleno div.rozbaleno-logo {padding-top:13px; padding-bottom:13px; padding-left:23px; padding-right:23px;}
+  #rozbaleno div.rozbaleno-30 {display:block; float:left; width:20%;}
+  #rozbaleno div.rozbaleno-70 {display:block; float:left; width:80%;}
+
+  #rozbaleno ul {display:block; margin:0; padding:0;padding-top:13px;padding-bottom:13px;padding-left:40px;}
+    #rozbaleno ul li {display:block; float:left; list-style:none; padding-right:5%; line-height:2;}
+    #rozbaleno ul li strong {display:block; width:70%; float:left; font-weight:100; padding-right:10%;}
+    #rozbaleno ul li span {display:block; width:20%; float:left;}
+
+  #akce.skryt {display:block; float:right; margin-right:16px; margin-bottom:1em; margin-top:-1em; width:16px; height:16px; overflow:hidden;}
+  
+#prouzek_main   #ul-list.w50 li {width:44%;}
+#prouzek_main     #ul-list.w100 li {width:95%;}
+#prouzek_main       #ul-list.w100 li strong {width:65%;}  
+
