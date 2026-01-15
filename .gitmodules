@@ -10,3 +10,6 @@
 [submodule "IJA/ija_project"]
 	path = IJA/ija_project
 	url = git@github.com:stahlgit/ija_project.git
+[submodule "ISA/ISA/snmp2otel"]
+	path = ISA/ISA/snmp2otel
+	url = git@github.com:stahlgit/snmp2otel.git
