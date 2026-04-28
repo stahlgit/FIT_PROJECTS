@@ -1,0 +1,17 @@
+# IDE specific files
+.vscode/
+.cache/
+compile_commands.json
+
+# Build artifacts
+build/
+bin/
+obj/
+
+# Binary files
+dns_test
+ipk-L4-scan
+test_scanner
+
+# temporary files
+*.txt
