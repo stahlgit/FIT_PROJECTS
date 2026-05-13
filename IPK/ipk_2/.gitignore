@@ -1,4 +1,14 @@
-.vscode
-.idea
-*.o
+# binary leftovers
 build/
+test_rdt
+ipk-rdt
+
+# IDE files
+.vscode/
+
+# linter files
+compile_commands.json
+compile_flags.txt
+
+*.txt
+*.zip
